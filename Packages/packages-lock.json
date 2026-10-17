@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.leopotam.ecs": {
+      "version": "https://github.com/Leopotam/ecs.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "b256e570bdb15a0bea9e664af32953068a2ac1e5"
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.10",
       "depth": 0,

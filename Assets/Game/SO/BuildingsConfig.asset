@@ -1,0 +1,4006 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9c7895cbc48e50428ce207be032d8fb, type: 3}
+  m_Name: BuildingsConfig
+  m_EditorClassIdentifier: Assembly-CSharp::BuildingsConfig
+  GridSize: 100
+  MaxDepth: 5
+  FloorSpacing: 8
+  BaseMaterial: {fileID: 2100000, guid: f1a7ad82572c57a479e56ff0c430e325, type: 2}
+  WallHeight: 1.6
+  CorridorWallHeight: 1.1
+  WallThickness: 0.15
+  SurfaceColor: {r: 0.3, g: 0.34, b: 0.28, a: 1}
+  UndergroundColor: {r: 0.15, g: 0.16, b: 0.18, a: 1}
+  GridLineColor: {r: 0.23, g: 0.24, b: 0.27, a: 1}
+  LockedColor: {r: 0.22, g: 0.11, b: 0.11, a: 1}
+  UnreachedCorridorColor: {r: 0.55, g: 0.3, b: 0.26, a: 1}
+  CorridorWallColor: {r: 0.46, g: 0.48, b: 0.52, a: 1}
+  GhostValid: {r: 0.3, g: 0.9, b: 0.4, a: 1}
+  GhostUnconnected: {r: 0.95, g: 0.8, b: 0.3, a: 1}
+  GhostInvalid: {r: 0.95, g: 0.3, b: 0.3, a: 1}
+  GhostZone: {r: 0.3, g: 0.6, b: 0.95, a: 1}
+  ParallelGap: 2
+  SnapDistance: 2
+  RefundPercent: 50
+  MainEntranceOrigin: {x: 41, y: 14}
+  MainEntranceRotation: 2
+  StartCorridor: 3
+  StartCorridorLength: 14
+  WaterSeed: 1977
+  GroundwaterByDepth: 000000000300000006000000080000000a0000000c000000
+  RiversByDepth: 000000000000000001000000010000000200000002000000
+  GroundwaterRadius: {x: 4, y: 9}
+  RiverWidth: 3
+  DryRadiusAroundEntrance: 16
+  WearPerDay: 0.1
+  RepairPerDay: 0.05
+  GroundwaterColor: {r: 0.18, g: 0.36, b: 0.62, a: 1}
+  RiverColor: {r: 0.1, g: 0.24, b: 0.55, a: 1}
+  DrainedColor: {r: 0.16, g: 0.22, b: 0.26, a: 1}
+  Corridors:
+  - Name: "\u0422\u0435\u0445\u0442\u043E\u043D\u043D\u0435\u043B\u044C"
+    Width: 1
+    CostPerCell: 25
+    UpkeepPerCell: 1
+    Color: {r: 0.4, g: 0.37, b: 0.3, a: 1}
+    RequiredDirectorLevel: 1
+    ServiceOnly: 1
+    Description: "\u0421\u043B\u0443\u0436\u0435\u0431\u043D\u044B\u0439 \u0445\u043E\u0434.
+      \u041A\u043E\u043C\u043D\u0430\u0442\u044B \u043A \u043D\u0435\u043C\u0443
+      \u043D\u0435 \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0430\u044E\u0442\u0441\u044F,
+      \u043A\u0440\u043E\u043C\u0435 \u0438\u043D\u0444\u0440\u0430\u0441\u0442\u0440\u0443\u043A\u0442\u0443\u0440\u044B."
+  - Name: "\u0423\u0437\u043A\u0438\u0439 \u043A\u043E\u0440\u0438\u0434\u043E\u0440"
+    Width: 2
+    CostPerCell: 40
+    UpkeepPerCell: 2
+    Color: {r: 0.5, g: 0.52, b: 0.56, a: 1}
+    RequiredDirectorLevel: 1
+    ServiceOnly: 0
+    Description: "\u0414\u0435\u0448\u0451\u0432\u044B\u0439, \u0434\u043B\u044F
+      \u043E\u0444\u0438\u0441\u043E\u0432 \u0438 \u0431\u044B\u0442\u0430."
+  - Name: "\u041A\u043E\u0440\u0438\u0434\u043E\u0440"
+    Width: 3
+    CostPerCell: 50
+    UpkeepPerCell: 2
+    Color: {r: 0.6, g: 0.62, b: 0.66, a: 1}
+    RequiredDirectorLevel: 1
+    ServiceOnly: 0
+    Description: "\u041E\u0441\u043D\u043E\u0432\u043D\u043E\u0439, \u043F\u043E\u0434
+      \u0431\u043E\u043B\u044C\u0448\u0438\u043D\u0441\u0442\u0432\u043E \u043C\u043E\u0434\u0443\u043B\u0435\u0439."
+  - Name: "\u0428\u0438\u0440\u043E\u043A\u0438\u0439 \u043A\u043E\u0440\u0438\u0434\u043E\u0440"
+    Width: 5
+    CostPerCell: 70
+    UpkeepPerCell: 3
+    Color: {r: 0.7, g: 0.72, b: 0.76, a: 1}
+    RequiredDirectorLevel: 3
+    ServiceOnly: 0
+    Description: "\u041A \u043A\u0440\u0443\u043F\u043D\u044B\u043C \u043A\u0430\u043C\u0435\u0440\u0430\u043C
+      \u0438 \u0442\u044F\u0436\u0451\u043B\u043E\u043C\u0443 \u043B\u0438\u0444\u0442\u0443."
+  - Name: "\u041C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u043B\u044C"
+    Width: 7
+    CostPerCell: 90
+    UpkeepPerCell: 4
+    Color: {r: 0.66, g: 0.7, b: 0.62, a: 1}
+    RequiredDirectorLevel: 5
+    ServiceOnly: 0
+    Description: "\u042D\u043B\u0435\u043A\u0442\u0440\u043E\u043A\u0430\u0440\u044B
+      \u0438 \u043C\u043E\u043D\u043E\u0440\u0435\u043B\u044C\u0441."
+  Buildings:
+  - Id: cell_item
+    Name: "\u041A\u0430\u043C\u0435\u0440\u0430: \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B"
+    ShortName: "\u041F\u0440\u0435\u0434\u043C\u0435\u0442\u044B"
+    Variant: 
+    Category: 0
+    Role: 6
+    Shape: 5
+    Size: {x: 6, y: 4}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 2
+    ControlDoorX: 0
+    Cost: 7000
+    MonthlyUpkeep: 600
+    Color: {r: 0.35, g: 0.55, b: 0.4, a: 1}
+    Containment: 1
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 0
+    Description: "\u041D\u0435\u0431\u043E\u043B\u044C\u0448\u0438\u0435 \u043E\u0431\u044A\u0435\u043A\u0442\u044B.
+      \u041A\u0430\u043C\u0435\u0440\u0430 \u0438 \u043F\u0443\u043B\u044C\u0442\u043E\u0432\u0430\u044F
+      \u0437\u0430 \u0441\u0442\u0435\u043A\u043B\u043E\u043C, \u0434\u0432\u0430
+      \u0432\u0445\u043E\u0434\u0430."
+  - Id: cell_humanoid
+    Name: "\u041A\u0430\u043C\u0435\u0440\u0430: \u0433\u0443\u043C\u0430\u043D\u043E\u0438\u0434\u044B"
+    ShortName: "\u0413\u0443\u043C\u0430\u043D\u043E\u0438\u0434\u044B"
+    Variant: 
+    Category: 0
+    Role: 6
+    Shape: 5
+    Size: {x: 8, y: 5}
+    DoorX: 4
+    DoorWidth: 1
+    ControlWidth: 2
+    ControlDoorX: 0
+    Cost: 10000
+    MonthlyUpkeep: 900
+    Color: {r: 0.45, g: 0.55, b: 0.72, a: 1}
+    Containment: 2
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 0
+    Description: "\u0416\u0438\u043B\u0430\u044F \u043A\u0430\u043C\u0435\u0440\u0430
+      \u043F\u043E\u0434 \u043D\u0430\u0431\u043B\u044E\u0434\u0435\u043D\u0438\u0435\u043C.
+      \u0421 \u043F\u0443\u043B\u044C\u0442\u043E\u0432\u043E\u0439."
+  - Id: cell_stable
+    Name: "\u041A\u0430\u043C\u0435\u0440\u0430 \u0441\u0442\u0430\u0431\u0438\u043B\u044C\u043D\u044B\u0445
+      \u0433\u0443\u043C\u0430\u043D\u043E\u0438\u0434\u043E\u0432"
+    ShortName: "\u0421\u0442\u0430\u0431\u0438\u043B\u044C\u043D\u044B\u0435"
+    Variant: 
+    Category: 0
+    Role: 6
+    Shape: 0
+    Size: {x: 6, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 9000
+    MonthlyUpkeep: 1000
+    Color: {r: 0.62, g: 0.66, b: 0.8, a: 1}
+    Containment: 6
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 0
+    Description: "\u041A\u043E\u043C\u0444\u043E\u0440\u0442\u043D\u044B\u0435 \u0443\u0441\u043B\u043E\u0432\u0438\u044F
+      \u0431\u0435\u0437 \u043F\u043E\u0441\u0442\u043E\u044F\u043D\u043D\u043E\u0439
+      \u0441\u043B\u0435\u0436\u043A\u0438. \u0411\u0435\u0437 \u043F\u0443\u043B\u044C\u0442\u043E\u0432\u043E\u0439,
+      \u043E\u0434\u0438\u043D \u0432\u0445\u043E\u0434."
+  - Id: cell_creature
+    Name: "\u041A\u0430\u043C\u0435\u0440\u0430: \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0430"
+    ShortName: "\u0421\u0443\u0449\u0435\u0441\u0442\u0432\u0430"
+    Variant: 
+    Category: 0
+    Role: 6
+    Shape: 5
+    Size: {x: 10, y: 7}
+    DoorX: 6
+    DoorWidth: 1
+    ControlWidth: 3
+    ControlDoorX: 1
+    Cost: 14000
+    MonthlyUpkeep: 1300
+    Color: {r: 0.78, g: 0.6, b: 0.25, a: 1}
+    Containment: 3
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 0
+    Description: "\u0423\u0441\u0438\u043B\u0435\u043D\u043D\u044B\u0435 \u0441\u0442\u0435\u043D\u044B,
+      \u043A\u043E\u0440\u043C\u043B\u0435\u043D\u0438\u0435 \u0447\u0435\u0440\u0435\u0437
+      \u0448\u043B\u044E\u0437. \u0421 \u043F\u0443\u043B\u044C\u0442\u043E\u0432\u043E\u0439."
+  - Id: cell_large
+    Name: "\u041A\u0430\u043C\u0435\u0440\u0430: \u043A\u0440\u0443\u043F\u043D\u044B\u0435"
+    ShortName: "\u041A\u0440\u0443\u043F\u043D\u044B\u0435"
+    Variant: 
+    Category: 0
+    Role: 6
+    Shape: 5
+    Size: {x: 15, y: 12}
+    DoorX: 9
+    DoorWidth: 1
+    ControlWidth: 3
+    ControlDoorX: 1
+    Cost: 32000
+    MonthlyUpkeep: 2600
+    Color: {r: 0.7, g: 0.4, b: 0.3, a: 1}
+    Containment: 4
+    Capacity: 0
+    RequiredDirectorLevel: 3
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 5
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 0
+    Description: "\u0410\u043D\u0433\u0430\u0440 \u043F\u043E\u0434 \u043E\u0431\u044A\u0435\u043A\u0442\u044B
+      \u0440\u0430\u0437\u043C\u0435\u0440\u043E\u043C \u0441 \u043C\u0430\u0448\u0438\u043D\u0443.
+      \u0412\u0445\u043E\u0434 \u0442\u043E\u043B\u044C\u043A\u043E \u0441 \u0448\u0438\u0440\u043E\u043A\u043E\u0433\u043E
+      \u043A\u043E\u0440\u0438\u0434\u043E\u0440\u0430."
+  - Id: intake
+    Name: "\u041F\u0440\u0438\u0451\u043C\u043D\u0438\u043A-\u043A\u0430\u0440\u0430\u043D\u0442\u0438\u043D"
+    ShortName: "\u041F\u0440\u0438\u0451\u043C\u043D\u0438\u043A"
+    Variant: 
+    Category: 0
+    Role: 0
+    Shape: 0
+    Size: {x: 6, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 6000
+    MonthlyUpkeep: 500
+    Color: {r: 0.4, g: 0.55, b: 0.48, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041D\u043E\u0432\u044B\u0439 \u043E\u0431\u044A\u0435\u043A\u0442
+      \u0441\u043D\u0430\u0447\u0430\u043B\u0430 \u043F\u0440\u043E\u0432\u0435\u0440\u044F\u044E\u0442
+      \u0437\u0434\u0435\u0441\u044C."
+  - Id: neutralized
+    Name: "\u0421\u043A\u043B\u0430\u0434 \u043D\u0435\u0439\u0442\u0440\u0430\u043B\u0438\u0437\u043E\u0432\u0430\u043D\u043D\u044B\u0445
+      \u043E\u0431\u044A\u0435\u043A\u0442\u043E\u0432"
+    ShortName: "\u041D\u0435\u0439\u0442\u0440\u0430\u043B\u0438\u0437\u043E\u0432\u0430\u043D\u043D\u044B\u0435"
+    Variant: 
+    Category: 0
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 4000
+    MonthlyUpkeep: 300
+    Color: {r: 0.4, g: 0.55, b: 0.48, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041E\u0441\u0432\u043E\u0431\u043E\u0436\u0434\u0430\u0435\u0442
+      \u043A\u0430\u043C\u0435\u0440\u044B, \u043E\u0441\u0442\u0430\u044E\u0442\u0441\u044F
+      \u043E\u0431\u0440\u0430\u0437\u0446\u044B."
+  - Id: cell_service
+    Name: "\u041F\u0443\u043D\u043A\u0442 \u043E\u0431\u0441\u043B\u0443\u0436\u0438\u0432\u0430\u043D\u0438\u044F
+      \u043A\u0430\u043C\u0435\u0440"
+    ShortName: "\u041E\u0431\u0441\u043B\u0443\u0436\u0438\u0432\u0430\u043D\u0438\u0435"
+    Variant: 
+    Category: 0
+    Role: 0
+    Shape: 0
+    Size: {x: 4, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 3500
+    MonthlyUpkeep: 300
+    Color: {r: 0.4, g: 0.55, b: 0.48, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041A\u043E\u0440\u043C\u043B\u0435\u043D\u0438\u0435, \u0443\u0431\u043E\u0440\u043A\u0430,
+      \u0440\u0435\u043C\u043E\u043D\u0442 \u043A\u0430\u043C\u0435\u0440."
+  - Id: block_control
+    Name: "\u041F\u043E\u0441\u0442 \u043A\u043E\u043D\u0442\u0440\u043E\u043B\u044F
+      \u0431\u043B\u043E\u043A\u0430"
+    ShortName: "\u041A\u043E\u043D\u0442\u0440\u043E\u043B\u044C \u0431\u043B\u043E\u043A\u0430"
+    Variant: 
+    Category: 0
+    Role: 0
+    Shape: 0
+    Size: {x: 4, y: 3}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 5000
+    MonthlyUpkeep: 400
+    Color: {r: 0.4, g: 0.55, b: 0.48, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041C\u043E\u043D\u0438\u0442\u043E\u0440\u044B \u043A\u0430\u043C\u0435\u0440
+      \u0431\u043B\u043E\u043A\u0430: \u043D\u0430\u0440\u0443\u0448\u0435\u043D\u0438\u0435
+      \u0437\u0430\u043C\u0435\u0447\u0430\u044E\u0442 \u0440\u0430\u043D\u044C\u0448\u0435."
+  - Id: post_s
+    Name: "\u0418\u0441\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u0441\u043A\u0438\u0439
+      \u043F\u043E\u0441\u0442"
+    ShortName: "\u0418\u0441\u0441\u043B. \u043F\u043E\u0441\u0442"
+    Variant: "\u043C\u0430\u043B\u044B\u0439"
+    Category: 1
+    Role: 7
+    Shape: 7
+    Size: {x: 4, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 6000
+    MonthlyUpkeep: 500
+    Color: {r: 0.36, g: 0.58, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 2
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 0
+    Description: "\u0423\u0447\u0451\u043D\u044B\u0435 \u0432\u0435\u0434\u0443\u0442
+      \u043F\u0440\u0438\u0432\u044F\u0437\u0430\u043D\u043D\u044B\u0435 \u043A\u0430\u043C\u0435\u0440\u044B:
+      1 \u0443\u0447\u0451\u043D\u044B\u0439 \u2014 1 \u043E\u0431\u044A\u0435\u043A\u0442.
+      \u041E\u0442\u0441\u044E\u0434\u0430 \u0432\u0441\u0435 \u043A\u043E\u043C\u0430\u043D\u0434\u044B
+      \u043F\u043E \u043E\u0431\u044A\u0435\u043A\u0442\u0430\u043C. \u041C\u0435\u0441\u0442:
+      2."
+  - Id: post_m
+    Name: "\u0418\u0441\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u0441\u043A\u0438\u0439
+      \u043F\u043E\u0441\u0442"
+    ShortName: "\u0418\u0441\u0441\u043B. \u043F\u043E\u0441\u0442"
+    Variant: "\u0441\u0440\u0435\u0434\u043D\u0438\u0439"
+    Category: 1
+    Role: 7
+    Shape: 7
+    Size: {x: 6, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 14000
+    MonthlyUpkeep: 1100
+    Color: {r: 0.36, g: 0.58, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 6
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 0
+    Description: "\u0423\u0447\u0451\u043D\u044B\u0435 \u0432\u0435\u0434\u0443\u0442
+      \u043F\u0440\u0438\u0432\u044F\u0437\u0430\u043D\u043D\u044B\u0435 \u043A\u0430\u043C\u0435\u0440\u044B:
+      1 \u0443\u0447\u0451\u043D\u044B\u0439 \u2014 1 \u043E\u0431\u044A\u0435\u043A\u0442.
+      \u041E\u0442\u0441\u044E\u0434\u0430 \u0432\u0441\u0435 \u043A\u043E\u043C\u0430\u043D\u0434\u044B
+      \u043F\u043E \u043E\u0431\u044A\u0435\u043A\u0442\u0430\u043C. \u041C\u0435\u0441\u0442:
+      6."
+  - Id: post_l
+    Name: "\u0418\u0441\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u0441\u043A\u0438\u0439
+      \u043F\u043E\u0441\u0442"
+    ShortName: "\u0418\u0441\u0441\u043B. \u043F\u043E\u0441\u0442"
+    Variant: "\u0431\u043E\u043B\u044C\u0448\u043E\u0439"
+    Category: 1
+    Role: 7
+    Shape: 7
+    Size: {x: 8, y: 7}
+    DoorX: 4
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 26000
+    MonthlyUpkeep: 2000
+    Color: {r: 0.36, g: 0.58, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 12
+    RequiredDirectorLevel: 3
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 0
+    Description: "\u0423\u0447\u0451\u043D\u044B\u0435 \u0432\u0435\u0434\u0443\u0442
+      \u043F\u0440\u0438\u0432\u044F\u0437\u0430\u043D\u043D\u044B\u0435 \u043A\u0430\u043C\u0435\u0440\u044B:
+      1 \u0443\u0447\u0451\u043D\u044B\u0439 \u2014 1 \u043E\u0431\u044A\u0435\u043A\u0442.
+      \u041E\u0442\u0441\u044E\u0434\u0430 \u0432\u0441\u0435 \u043A\u043E\u043C\u0430\u043D\u0434\u044B
+      \u043F\u043E \u043E\u0431\u044A\u0435\u043A\u0442\u0430\u043C. \u041C\u0435\u0441\u0442:
+      12."
+  - Id: lab_samples
+    Name: "\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0438\u044F \u043E\u0431\u0440\u0430\u0437\u0446\u043E\u0432"
+    ShortName: "\u041E\u0431\u0440\u0430\u0437\u0446\u044B"
+    Variant: 
+    Category: 1
+    Role: 0
+    Shape: 0
+    Size: {x: 6, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 9000
+    MonthlyUpkeep: 700
+    Color: {r: 0.36, g: 0.58, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0410\u043D\u0430\u043B\u0438\u0437 \u043F\u0440\u043E\u0431,
+      \u0432\u0437\u044F\u0442\u044B\u0445 \u0443 \u043E\u0431\u044A\u0435\u043A\u0442\u043E\u0432."
+  - Id: vivarium
+    Name: "\u0412\u0438\u0432\u0430\u0440\u0438\u0439"
+    ShortName: "\u0412\u0438\u0432\u0430\u0440\u0438\u0439"
+    Variant: 
+    Category: 1
+    Role: 0
+    Shape: 0
+    Size: {x: 6, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 7000
+    MonthlyUpkeep: 600
+    Color: {r: 0.36, g: 0.58, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0418\u0441\u043F\u044B\u0442\u0430\u043D\u0438\u044F \u043D\u0430
+      \u0436\u0438\u0432\u043E\u0442\u043D\u044B\u0445: \u0434\u0435\u0448\u0435\u0432\u043B\u0435
+      \u043A\u043B\u0430\u0441\u0441\u0430 D."
+  - Id: autopsy
+    Name: "\u041F\u0440\u043E\u0437\u0435\u043A\u0442\u043E\u0440\u0441\u043A\u0430\u044F"
+    ShortName: "\u041F\u0440\u043E\u0437\u0435\u043A\u0442\u043E\u0440\u0441\u043A\u0430\u044F"
+    Variant: 
+    Category: 1
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 6000
+    MonthlyUpkeep: 500
+    Color: {r: 0.36, g: 0.58, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0412\u0441\u043A\u0440\u044B\u0442\u0438\u044F \u0438 \u0431\u0438\u043E\u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u044B
+      \u043F\u043E\u0441\u043B\u0435 \u0438\u0441\u043F\u044B\u0442\u0430\u043D\u0438\u0439."
+  - Id: lab_physics
+    Name: "\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0438\u044F \u0430\u043D\u043E\u043C\u0430\u043B\u044C\u043D\u043E\u0439
+      \u0444\u0438\u0437\u0438\u043A\u0438"
+    ShortName: "\u0424\u0438\u0437\u0438\u043A\u0430"
+    Variant: 
+    Category: 1
+    Role: 0
+    Shape: 0
+    Size: {x: 7, y: 6}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 16000
+    MonthlyUpkeep: 1200
+    Color: {r: 0.36, g: 0.58, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 1
+    Planned: 1
+    Description: "\u0414\u0438\u0441\u0446\u0438\u043F\u043B\u0438\u043D\u0430 \xAB\u0430\u043D\u043E\u043C\u0430\u043B\u044C\u043D\u0430\u044F
+      \u0444\u0438\u0437\u0438\u043A\u0430\xBB. \u0415\u0451 \u0443\u0441\u043A\u043E\u0440\u044F\u044E\u0442
+      \u043E\u0431\u044A\u0435\u043A\u0442\u044B \u044D\u0442\u043E\u0439 \u0434\u0438\u0441\u0446\u0438\u043F\u043B\u0438\u043D\u044B."
+  - Id: lab_biomed
+    Name: "\u0411\u0438\u043E\u043C\u0435\u0434\u0438\u0446\u0438\u043D\u0441\u043A\u0430\u044F
+      \u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0438\u044F"
+    ShortName: "\u0411\u0438\u043E\u043C\u0435\u0434\u0438\u0446\u0438\u043D\u0430"
+    Variant: 
+    Category: 1
+    Role: 0
+    Shape: 0
+    Size: {x: 7, y: 6}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 16000
+    MonthlyUpkeep: 1200
+    Color: {r: 0.36, g: 0.58, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 2
+    Planned: 1
+    Description: "\u0414\u0438\u0441\u0446\u0438\u043F\u043B\u0438\u043D\u0430 \xAB\u0431\u0438\u043E\u043C\u0435\u0434\u0438\u0446\u0438\u043D\u0430\xBB.
+      \u0415\u0451 \u0443\u0441\u043A\u043E\u0440\u044F\u044E\u0442 \u043E\u0431\u044A\u0435\u043A\u0442\u044B
+      \u044D\u0442\u043E\u0439 \u0434\u0438\u0441\u0446\u0438\u043F\u043B\u0438\u043D\u044B."
+  - Id: lab_chem
+    Name: "\u0425\u0438\u043C\u0438\u043A\u043E-\u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u043E\u0432\u0435\u0434\u0447\u0435\u0441\u043A\u0430\u044F
+      \u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0438\u044F"
+    ShortName: "\u0425\u0438\u043C\u0438\u044F"
+    Variant: 
+    Category: 1
+    Role: 0
+    Shape: 0
+    Size: {x: 7, y: 6}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 16000
+    MonthlyUpkeep: 1200
+    Color: {r: 0.36, g: 0.58, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 3
+    Planned: 1
+    Description: "\u0414\u0438\u0441\u0446\u0438\u043F\u043B\u0438\u043D\u0430 \xAB\u0445\u0438\u043C\u0438\u044F\xBB.
+      \u0415\u0451 \u0443\u0441\u043A\u043E\u0440\u044F\u044E\u0442 \u043E\u0431\u044A\u0435\u043A\u0442\u044B
+      \u044D\u0442\u043E\u0439 \u0434\u0438\u0441\u0446\u0438\u043F\u043B\u0438\u043D\u044B."
+  - Id: lab_meme
+    Name: "\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0438\u044F \u043C\u0435\u043C\u0435\u0442\u0438\u043A\u0438
+      \u0438 \u043F\u0441\u0438\u0445\u043E\u043B\u043E\u0433\u0438\u0438"
+    ShortName: "\u041C\u0435\u043C\u0435\u0442\u0438\u043A\u0430"
+    Variant: 
+    Category: 1
+    Role: 0
+    Shape: 0
+    Size: {x: 7, y: 6}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 22000
+    MonthlyUpkeep: 1500
+    Color: {r: 0.36, g: 0.58, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 4
+    Planned: 1
+    Description: "\u0414\u0438\u0441\u0446\u0438\u043F\u043B\u0438\u043D\u0430 \xAB\u043C\u0435\u043C\u0435\u0442\u0438\u043A\u0430
+      \u0438 \u043F\u0441\u0438\u0445\u043E\u043B\u043E\u0433\u0438\u044F\xBB. \u0415\u0451
+      \u0443\u0441\u043A\u043E\u0440\u044F\u044E\u0442 \u043E\u0431\u044A\u0435\u043A\u0442\u044B
+      \u044D\u0442\u043E\u0439 \u0434\u0438\u0441\u0446\u0438\u043F\u043B\u0438\u043D\u044B."
+  - Id: design_bureau
+    Name: "\u0418\u043D\u0436\u0435\u043D\u0435\u0440\u043D\u043E\u0435 \u041A\u0411"
+    ShortName: "\u041A\u0411"
+    Variant: 
+    Category: 1
+    Role: 0
+    Shape: 0
+    Size: {x: 7, y: 6}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 16000
+    MonthlyUpkeep: 1200
+    Color: {r: 0.36, g: 0.58, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 5
+    Planned: 1
+    Description: "\u0414\u0438\u0441\u0446\u0438\u043F\u043B\u0438\u043D\u0430 \xAB\u0438\u043D\u0436\u0435\u043D\u0435\u0440\u0438\u044F\xBB.
+      \u0415\u0451 \u0443\u0441\u043A\u043E\u0440\u044F\u044E\u0442 \u043E\u0431\u044A\u0435\u043A\u0442\u044B
+      \u044D\u0442\u043E\u0439 \u0434\u0438\u0441\u0446\u0438\u043F\u043B\u0438\u043D\u044B."
+  - Id: computing
+    Name: "\u0412\u044B\u0447\u0438\u0441\u043B\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439
+      \u0446\u0435\u043D\u0442\u0440"
+    ShortName: "\u0412\u044B\u0447\u0438\u0441\u043B\u0435\u043D\u0438\u044F"
+    Variant: 
+    Category: 1
+    Role: 0
+    Shape: 0
+    Size: {x: 7, y: 6}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 22000
+    MonthlyUpkeep: 1500
+    Color: {r: 0.36, g: 0.58, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 6
+    Planned: 1
+    Description: "\u0414\u0438\u0441\u0446\u0438\u043F\u043B\u0438\u043D\u0430 \xAB\u0432\u044B\u0447\u0438\u0441\u043B\u0435\u043D\u0438\u044F\xBB.
+      \u0415\u0451 \u0443\u0441\u043A\u043E\u0440\u044F\u044E\u0442 \u043E\u0431\u044A\u0435\u043A\u0442\u044B
+      \u044D\u0442\u043E\u0439 \u0434\u0438\u0441\u0446\u0438\u043F\u043B\u0438\u043D\u044B."
+  - Id: lab_spacetime
+    Name: "\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0438\u044F \u043F\u0440\u043E\u0441\u0442\u0440\u0430\u043D\u0441\u0442\u0432\u0430-\u0432\u0440\u0435\u043C\u0435\u043D\u0438"
+    ShortName: "\u041F\u0440\u043E\u0441\u0442\u0440\u0430\u043D\u0441\u0442\u0432\u043E-\u0432\u0440\u0435\u043C\u044F"
+    Variant: 
+    Category: 1
+    Role: 0
+    Shape: 0
+    Size: {x: 7, y: 6}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 28000
+    MonthlyUpkeep: 1800
+    Color: {r: 0.36, g: 0.58, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 3
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 7
+    Planned: 1
+    Description: "\u0414\u0438\u0441\u0446\u0438\u043F\u043B\u0438\u043D\u0430 \xAB\u043F\u0440\u043E\u0441\u0442\u0440\u0430\u043D\u0441\u0442\u0432\u043E-\u0432\u0440\u0435\u043C\u044F\xBB.
+      \u0415\u0451 \u0443\u0441\u043A\u043E\u0440\u044F\u044E\u0442 \u043E\u0431\u044A\u0435\u043A\u0442\u044B
+      \u044D\u0442\u043E\u0439 \u0434\u0438\u0441\u0446\u0438\u043F\u043B\u0438\u043D\u044B."
+  - Id: lab_thaum
+    Name: "\u0422\u0430\u0443\u043C\u0430\u0442\u0443\u0440\u0433\u0438\u0447\u0435\u0441\u043A\u0430\u044F
+      \u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0438\u044F"
+    ShortName: "\u0422\u0430\u0443\u043C\u0430\u0442\u0443\u0440\u0433\u0438\u044F"
+    Variant: 
+    Category: 1
+    Role: 0
+    Shape: 0
+    Size: {x: 7, y: 6}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 40000
+    MonthlyUpkeep: 2400
+    Color: {r: 0.36, g: 0.58, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 5
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 8
+    Planned: 1
+    Description: "\u0414\u0438\u0441\u0446\u0438\u043F\u043B\u0438\u043D\u0430 \xAB\u0442\u0430\u0443\u043C\u0430\u0442\u0443\u0440\u0433\u0438\u044F\xBB.
+      \u0415\u0451 \u0443\u0441\u043A\u043E\u0440\u044F\u044E\u0442 \u043E\u0431\u044A\u0435\u043A\u0442\u044B
+      \u044D\u0442\u043E\u0439 \u0434\u0438\u0441\u0446\u0438\u043F\u043B\u0438\u043D\u044B."
+  - Id: lab_hot
+    Name: "\xAB\u0413\u043E\u0440\u044F\u0447\u0430\u044F\xBB \u0440\u0430\u0434\u0438\u043E\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0438\u044F"
+    ShortName: "\u0420\u0430\u0434\u0438\u043E\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0438\u044F"
+    Variant: 
+    Category: 1
+    Role: 0
+    Shape: 0
+    Size: {x: 6, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 16000
+    MonthlyUpkeep: 1400
+    Color: {r: 0.36, g: 0.58, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 3
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041E\u0431\u044A\u0435\u043A\u0442\u044B \u0441 \u0438\u0437\u043B\u0443\u0447\u0435\u043D\u0438\u0435\u043C,
+      \u0440\u0430\u0431\u043E\u0442\u0430 \u043C\u0430\u043D\u0438\u043F\u0443\u043B\u044F\u0442\u043E\u0440\u0430\u043C\u0438."
+  - Id: lab_amnestic
+    Name: "\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0438\u044F \u0430\u043C\u043D\u0435\u0437\u0438\u0430\u043A\u043E\u0432"
+    ShortName: "\u0410\u043C\u043D\u0435\u0437\u0438\u0430\u043A\u0438"
+    Variant: 
+    Category: 1
+    Role: 0
+    Shape: 0
+    Size: {x: 6, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 14000
+    MonthlyUpkeep: 1100
+    Color: {r: 0.36, g: 0.58, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0441\u0442\u0432\u043E
+      \u0430\u043C\u043D\u0435\u0437\u0438\u0430\u043A\u043E\u0432 \u043F\u0440\u043E\u0442\u0438\u0432
+      \u0440\u0430\u0441\u0441\u0435\u043A\u0440\u0435\u0447\u0438\u0432\u0430\u043D\u0438\u044F."
+  - Id: library
+    Name: "\u041D\u0430\u0443\u0447\u043D\u0430\u044F \u0431\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430"
+    ShortName: "\u0411\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430"
+    Variant: 
+    Category: 1
+    Role: 0
+    Shape: 0
+    Size: {x: 6, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 6000
+    MonthlyUpkeep: 400
+    Color: {r: 0.36, g: 0.58, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B \u043E\u0431\u044A\u0435\u043A\u0442\u043E\u0432
+      \u0437\u0430\u043F\u043E\u043B\u043D\u044F\u044E\u0442\u0441\u044F \u0431\u044B\u0441\u0442\u0440\u0435\u0435."
+  - Id: council
+    Name: "\u0417\u0430\u043B \u0443\u0447\u0451\u043D\u043E\u0433\u043E \u0441\u043E\u0432\u0435\u0442\u0430"
+    ShortName: "\u0423\u0447\u0451\u043D\u044B\u0439 \u0441\u043E\u0432\u0435\u0442"
+    Variant: 
+    Category: 1
+    Role: 0
+    Shape: 0
+    Size: {x: 7, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 12000
+    MonthlyUpkeep: 800
+    Color: {r: 0.36, g: 0.58, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0411\u043E\u043D\u0443\u0441 \u043A \u0438\u0441\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u043D\u0438\u044F\u043C,
+      \u043D\u043E\u0432\u044B\u0435 \u0432\u0435\u0442\u043A\u0438."
+  - Id: pilot_prod
+    Name: "\u041E\u043F\u044B\u0442\u043D\u043E\u0435 \u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0441\u0442\u0432\u043E"
+    ShortName: "\u041E\u043F\u044B\u0442\u043D\u043E\u0435 \u043F\u0440-\u0432\u043E"
+    Variant: 
+    Category: 1
+    Role: 0
+    Shape: 0
+    Size: {x: 9, y: 7}
+    DoorX: 4
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 30000
+    MonthlyUpkeep: 2000
+    Color: {r: 0.36, g: 0.58, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 3
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041A\u043E\u043C\u043C\u0435\u0440\u0447\u0435\u0441\u043A\u043E\u0435
+      \u043F\u0440\u0438\u043C\u0435\u043D\u0435\u043D\u0438\u0435 \u0430\u043D\u043E\u043C\u0430\u043B\u0438\u0439
+      \u2014 \u0438\u0441\u0442\u043E\u0447\u043D\u0438\u043A \u0434\u0435\u043D\u0435\u0433."
+  - Id: cross_test
+    Name: "\u0417\u0430\u043B \u043F\u0435\u0440\u0435\u043A\u0440\u0451\u0441\u0442\u043D\u044B\u0445
+      \u0438\u0441\u043F\u044B\u0442\u0430\u043D\u0438\u0439"
+    ShortName: "\u041F\u0435\u0440\u0435\u043A\u0440\u0451\u0441\u0442\u043D\u044B\u0435"
+    Variant: 
+    Category: 1
+    Role: 0
+    Shape: 0
+    Size: {x: 10, y: 8}
+    DoorX: 5
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 60000
+    MonthlyUpkeep: 4000
+    Color: {r: 0.36, g: 0.58, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 5
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041D\u0430 \u0431\u0443\u0434\u0443\u0449\u0435\u0435: \u043E\u0431\u044A\u0435\u043A\u0442
+      \u043F\u0440\u043E\u0442\u0438\u0432 \u043E\u0431\u044A\u0435\u043A\u0442\u0430."
+  - Id: guard_s
+    Name: "\u041F\u043E\u0441\u0442 \u043E\u0445\u0440\u0430\u043D\u044B"
+    ShortName: "\u041F\u043E\u0441\u0442 \u043E\u0445\u0440\u0430\u043D\u044B"
+    Variant: "\u043C\u0430\u043B\u044B\u0439"
+    Category: 2
+    Role: 8
+    Shape: 7
+    Size: {x: 4, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 4000
+    MonthlyUpkeep: 400
+    Color: {r: 0.62, g: 0.52, b: 0.34, a: 1}
+    Containment: 0
+    Capacity: 2
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0421\u043C\u0435\u043D\u0430 \u043E\u0445\u0440\u0430\u043D\u044B.
+      \u0427\u0435\u043C \u0431\u043B\u0438\u0436\u0435 \u043A \u0431\u0430\u0440\u0430\u043A\u0430\u043C
+      D \u0438 \u043A\u0430\u043C\u0435\u0440\u0430\u043C, \u0442\u0435\u043C \u0431\u044B\u0441\u0442\u0440\u0435\u0435
+      \u0441\u043E\u043F\u0440\u043E\u0432\u043E\u0436\u0434\u0435\u043D\u0438\u0435
+      \u0438\u0441\u043F\u044B\u0442\u0430\u043D\u0438\u0439 \u0438 \u0440\u0435\u0430\u043A\u0446\u0438\u044F
+      \u043D\u0430 \u043F\u043E\u0431\u0435\u0433\u0438. \u041C\u0435\u0441\u0442:
+      2."
+  - Id: guard_m
+    Name: "\u041F\u043E\u0441\u0442 \u043E\u0445\u0440\u0430\u043D\u044B"
+    ShortName: "\u041F\u043E\u0441\u0442 \u043E\u0445\u0440\u0430\u043D\u044B"
+    Variant: "\u0441\u0440\u0435\u0434\u043D\u0438\u0439"
+    Category: 2
+    Role: 8
+    Shape: 7
+    Size: {x: 6, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 9000
+    MonthlyUpkeep: 900
+    Color: {r: 0.62, g: 0.52, b: 0.34, a: 1}
+    Containment: 0
+    Capacity: 6
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0421\u043C\u0435\u043D\u0430 \u043E\u0445\u0440\u0430\u043D\u044B.
+      \u0427\u0435\u043C \u0431\u043B\u0438\u0436\u0435 \u043A \u0431\u0430\u0440\u0430\u043A\u0430\u043C
+      D \u0438 \u043A\u0430\u043C\u0435\u0440\u0430\u043C, \u0442\u0435\u043C \u0431\u044B\u0441\u0442\u0440\u0435\u0435
+      \u0441\u043E\u043F\u0440\u043E\u0432\u043E\u0436\u0434\u0435\u043D\u0438\u0435
+      \u0438\u0441\u043F\u044B\u0442\u0430\u043D\u0438\u0439 \u0438 \u0440\u0435\u0430\u043A\u0446\u0438\u044F
+      \u043D\u0430 \u043F\u043E\u0431\u0435\u0433\u0438. \u041C\u0435\u0441\u0442:
+      6."
+  - Id: guard_l
+    Name: "\u041F\u043E\u0441\u0442 \u043E\u0445\u0440\u0430\u043D\u044B"
+    ShortName: "\u041F\u043E\u0441\u0442 \u043E\u0445\u0440\u0430\u043D\u044B"
+    Variant: "\u0431\u043E\u043B\u044C\u0448\u043E\u0439"
+    Category: 2
+    Role: 8
+    Shape: 7
+    Size: {x: 8, y: 7}
+    DoorX: 4
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 18000
+    MonthlyUpkeep: 1700
+    Color: {r: 0.62, g: 0.52, b: 0.34, a: 1}
+    Containment: 0
+    Capacity: 12
+    RequiredDirectorLevel: 3
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0421\u043C\u0435\u043D\u0430 \u043E\u0445\u0440\u0430\u043D\u044B.
+      \u0427\u0435\u043C \u0431\u043B\u0438\u0436\u0435 \u043A \u0431\u0430\u0440\u0430\u043A\u0430\u043C
+      D \u0438 \u043A\u0430\u043C\u0435\u0440\u0430\u043C, \u0442\u0435\u043C \u0431\u044B\u0441\u0442\u0440\u0435\u0435
+      \u0441\u043E\u043F\u0440\u043E\u0432\u043E\u0436\u0434\u0435\u043D\u0438\u0435
+      \u0438\u0441\u043F\u044B\u0442\u0430\u043D\u0438\u0439 \u0438 \u0440\u0435\u0430\u043A\u0446\u0438\u044F
+      \u043D\u0430 \u043F\u043E\u0431\u0435\u0433\u0438. \u041C\u0435\u0441\u0442:
+      12."
+  - Id: checkpoint
+    Name: "\u041A\u041F\u041F"
+    ShortName: "\u041A\u041F\u041F"
+    Variant: 
+    Category: 2
+    Role: 10
+    Shape: 3
+    Size: {x: 3, y: 2}
+    DoorX: -1
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 4000
+    MonthlyUpkeep: 300
+    Color: {r: 0.65, g: 0.62, b: 0.3, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 2
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 0
+    Description: "\u041F\u0440\u043E\u043F\u0443\u0441\u043A\u043D\u043E\u0439 \u043F\u0443\u043D\u043A\u0442
+      \u043F\u0440\u044F\u043C\u043E \u0432 \u043A\u043E\u0440\u0438\u0434\u043E\u0440\u0435.
+      \u0421\u0442\u0430\u0432\u0438\u0442\u0441\u044F \u043F\u043E\u043F\u0435\u0440\u0451\u043A
+      \u043A\u043E\u0440\u0438\u0434\u043E\u0440\u0430."
+  - Id: tesla
+    Name: "\u0412\u043E\u0440\u043E\u0442\u0430 \u0422\u0435\u0441\u043B\u044B"
+    ShortName: "\u0422\u0435\u0441\u043B\u0430"
+    Variant: 
+    Category: 2
+    Role: 10
+    Shape: 4
+    Size: {x: 3, y: 1}
+    DoorX: -1
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 12000
+    MonthlyUpkeep: 900
+    Color: {r: 0.3, g: 0.72, b: 0.92, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 3
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 3
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 0
+    Description: "\u0421\u043C\u0435\u0440\u0442\u0435\u043B\u044C\u043D\u044B\u0439
+      \u0440\u0430\u0437\u0440\u044F\u0434 \u0434\u043B\u044F \u0432\u0441\u0435\u0445
+      \u0431\u0435\u0437 \u0434\u043E\u043F\u0443\u0441\u043A\u0430."
+  - Id: blast_door
+    Name: "\u0413\u0435\u0440\u043C\u043E\u0434\u0432\u0435\u0440\u044C \u0441\u0435\u043A\u0442\u043E\u0440\u0430"
+    ShortName: "\u0413\u0435\u0440\u043C\u043E\u0434\u0432\u0435\u0440\u044C"
+    Variant: 
+    Category: 2
+    Role: 10
+    Shape: 3
+    Size: {x: 3, y: 1}
+    DoorX: -1
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 6000
+    MonthlyUpkeep: 300
+    Color: {r: 0.52, g: 0.52, b: 0.56, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 2
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041F\u0440\u0438 \u043D\u0430\u0440\u0443\u0448\u0435\u043D\u0438\u0438
+      \u043E\u0442\u0441\u0435\u043A\u0430\u0435\u0442 \u0443\u0447\u0430\u0441\u0442\u043E\u043A
+      \u043A\u043E\u0440\u0438\u0434\u043E\u0440\u0430."
+  - Id: clearance_door
+    Name: "\u0414\u0432\u0435\u0440\u044C \u043F\u043E \u0434\u043E\u043F\u0443\u0441\u043A\u0443"
+    ShortName: "\u0414\u043E\u043F\u0443\u0441\u043A"
+    Variant: 
+    Category: 2
+    Role: 10
+    Shape: 3
+    Size: {x: 3, y: 1}
+    DoorX: -1
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 3000
+    MonthlyUpkeep: 150
+    Color: {r: 0.8, g: 0.68, b: 0.3, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 2
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041F\u0443\u0441\u043A\u0430\u0435\u0442 \u0442\u043E\u043B\u044C\u043A\u043E
+      \u043D\u0443\u0436\u043D\u044B\u0439 \u0443\u0440\u043E\u0432\u0435\u043D\u044C.
+      \u0411\u0435\u0437 \u043D\u0435\u0451 \u043F\u043E\u0441\u0442\u043E\u0440\u043E\u043D\u043D\u0438\u0435
+      \u0445\u043E\u0434\u044F\u0442 \u0432 \u0437\u0430\u043A\u0440\u044B\u0442\u044B\u0435
+      \u0437\u043E\u043D\u044B \u2014 \u0440\u0430\u0441\u0442\u0451\u0442 \u0440\u0430\u0441\u0441\u0435\u043A\u0440\u0435\u0447\u0438\u0432\u0430\u043D\u0438\u0435."
+  - Id: turret
+    Name: "\u0410\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F
+      \u0442\u0443\u0440\u0435\u043B\u044C"
+    ShortName: "\u0422\u0443\u0440\u0435\u043B\u044C"
+    Variant: 
+    Category: 2
+    Role: 10
+    Shape: 10
+    Size: {x: 1, y: 1}
+    DoorX: -1
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 7000
+    MonthlyUpkeep: 400
+    Color: {r: 0.4, g: 0.4, b: 0.44, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 3
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 2
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041E\u0433\u043E\u043D\u044C \u043F\u043E \u0431\u0435\u0433\u043B\u0435\u0446\u0430\u043C."
+  - Id: sleep_gas
+    Name: "\u0423\u0441\u044B\u043F\u043B\u044F\u044E\u0449\u0438\u0439 \u0433\u0430\u0437"
+    ShortName: "\u0413\u0430\u0437"
+    Variant: 
+    Category: 2
+    Role: 10
+    Shape: 10
+    Size: {x: 1, y: 1}
+    DoorX: -1
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 5000
+    MonthlyUpkeep: 300
+    Color: {r: 0.55, g: 0.75, b: 0.55, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 2
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041D\u0435\u0439\u0442\u0440\u0430\u043B\u0438\u0437\u0443\u0435\u0442
+      \u0431\u0435\u0433\u043B\u0435\u0446\u043E\u0432 \u0431\u0435\u0437 \u043F\u043E\u0442\u0435\u0440\u044C."
+  - Id: cctv
+    Name: "\u041A\u0430\u043C\u0435\u0440\u0430 \u0432\u0438\u0434\u0435\u043E\u043D\u0430\u0431\u043B\u044E\u0434\u0435\u043D\u0438\u044F"
+    ShortName: "\u041A\u0430\u043C\u0435\u0440\u0430"
+    Variant: 
+    Category: 2
+    Role: 10
+    Shape: 10
+    Size: {x: 1, y: 1}
+    DoorX: -1
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 800
+    MonthlyUpkeep: 40
+    Color: {r: 0.25, g: 0.25, b: 0.28, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 1
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0420\u0430\u0431\u043E\u0442\u0430\u0435\u0442 \u0432 \u043F\u0430\u0440\u0435
+      \u0441 \u0446\u0435\u043D\u0442\u0440\u043E\u043C \u0432\u0438\u0434\u0435\u043E\u043D\u0430\u0431\u043B\u044E\u0434\u0435\u043D\u0438\u044F."
+  - Id: cctv_center
+    Name: "\u0426\u0435\u043D\u0442\u0440 \u0432\u0438\u0434\u0435\u043E\u043D\u0430\u0431\u043B\u044E\u0434\u0435\u043D\u0438\u044F"
+    ShortName: "\u0412\u0438\u0434\u0435\u043E\u043D\u0430\u0431\u043B\u044E\u0434\u0435\u043D\u0438\u0435"
+    Variant: 
+    Category: 2
+    Role: 0
+    Shape: 0
+    Size: {x: 6, y: 4}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 9000
+    MonthlyUpkeep: 700
+    Color: {r: 0.62, g: 0.52, b: 0.34, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0421\u043C\u043E\u0442\u0440\u0438\u0442 \u0447\u0435\u0440\u0435\u0437
+      \u043A\u0430\u043C\u0435\u0440\u044B, \u0440\u0430\u043D\u044C\u0448\u0435
+      \u0432\u0438\u0434\u0438\u0442 \u043D\u0430\u0440\u0443\u0448\u0435\u043D\u0438\u044F
+      \u0438 \u0447\u0443\u0436\u0430\u043A\u043E\u0432."
+  - Id: arsenal
+    Name: "\u0410\u0440\u0441\u0435\u043D\u0430\u043B"
+    ShortName: "\u0410\u0440\u0441\u0435\u043D\u0430\u043B"
+    Variant: 
+    Category: 2
+    Role: 0
+    Shape: 0
+    Size: {x: 6, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 12000
+    MonthlyUpkeep: 600
+    Color: {r: 0.62, g: 0.52, b: 0.34, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0417\u0430\u043A\u0443\u043F\u043A\u0430 \u0441\u043D\u0430\u0440\u044F\u0436\u0435\u043D\u0438\u044F
+      \u043D\u0430 \u043A\u0430\u0436\u0434\u043E\u0433\u043E \u043E\u0445\u0440\u0430\u043D\u043D\u0438\u043A\u0430.
+      \u041F\u0440\u0438 \u043D\u0430\u0440\u0443\u0448\u0435\u043D\u0438\u0438 \u0438
+      \u0441\u0431\u043E\u0440\u0435 \u041C\u041E\u0413 \u0437\u0430\u0431\u0435\u0433\u0430\u044E\u0442
+      \u0437\u0430 \u0441\u043F\u0435\u0446\u0441\u043D\u0430\u0440\u044F\u0436\u0435\u043D\u0438\u0435\u043C."
+  - Id: mtf_base
+    Name: "\u0411\u0430\u0437\u0430 \u041C\u041E\u0413"
+    ShortName: "\u0411\u0430\u0437\u0430 \u041C\u041E\u0413"
+    Variant: 
+    Category: 2
+    Role: 0
+    Shape: 0
+    Size: {x: 10, y: 8}
+    DoorX: 5
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 40000
+    MonthlyUpkeep: 3000
+    Color: {r: 0.62, g: 0.52, b: 0.34, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 3
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0428\u0442\u0430\u0431 \u0438 \u0441\u0431\u043E\u0440 \u043C\u043E\u0431\u0438\u043B\u044C\u043D\u044B\u0445
+      \u043E\u043F\u0435\u0440\u0430\u0442\u0438\u0432\u043D\u044B\u0445 \u0433\u0440\u0443\u043F\u043F."
+  - Id: shooting_range
+    Name: "\u0421\u0442\u0440\u0435\u043B\u044C\u0431\u0438\u0449\u0435"
+    ShortName: "\u0421\u0442\u0440\u0435\u043B\u044C\u0431\u0438\u0449\u0435"
+    Variant: 
+    Category: 2
+    Role: 0
+    Shape: 0
+    Size: {x: 12, y: 4}
+    DoorX: 6
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 10000
+    MonthlyUpkeep: 500
+    Color: {r: 0.62, g: 0.52, b: 0.34, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0422\u0440\u0435\u043D\u0438\u0440\u043E\u0432\u043A\u0430 \u043E\u0445\u0440\u0430\u043D\u044B."
+  - Id: assault_range
+    Name: "\u0428\u0442\u0443\u0440\u043C\u043E\u0432\u043E\u0439 \u043F\u043E\u043B\u0438\u0433\u043E\u043D"
+    ShortName: "\u0428\u0442\u0443\u0440\u043C. \u043F\u043E\u043B\u0438\u0433\u043E\u043D"
+    Variant: 
+    Category: 2
+    Role: 0
+    Shape: 0
+    Size: {x: 10, y: 8}
+    DoorX: 5
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 20000
+    MonthlyUpkeep: 900
+    Color: {r: 0.62, g: 0.52, b: 0.34, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041E\u0442\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u043E\u0432\u0442\u043E\u0440\u043D\u043E\u0433\u043E
+      \u0437\u0430\u0445\u0432\u0430\u0442\u0430 \u043E\u0431\u044A\u0435\u043A\u0442\u043E\u0432."
+  - Id: guardhouse
+    Name: "\u0413\u0430\u0443\u043F\u0442\u0432\u0430\u0445\u0442\u0430"
+    ShortName: "\u0413\u0430\u0443\u043F\u0442\u0432\u0430\u0445\u0442\u0430"
+    Variant: 
+    Category: 2
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 5000
+    MonthlyUpkeep: 300
+    Color: {r: 0.62, g: 0.52, b: 0.34, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041F\u0440\u043E\u0432\u0438\u043D\u0438\u0432\u0448\u0438\u0435\u0441\u044F
+      \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u0438."
+  - Id: interrogation
+    Name: "\u0414\u043E\u043F\u0440\u043E\u0441\u043D\u0430\u044F"
+    ShortName: "\u0414\u043E\u043F\u0440\u043E\u0441\u043D\u0430\u044F"
+    Variant: 
+    Category: 2
+    Role: 0
+    Shape: 0
+    Size: {x: 4, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 4000
+    MonthlyUpkeep: 200
+    Color: {r: 0.62, g: 0.52, b: 0.34, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041F\u043E\u0439\u043C\u0430\u043D\u043D\u044B\u0435 \u0430\u0433\u0435\u043D\u0442\u044B
+      \u0413\u041E\u0418 \u0434\u0430\u044E\u0442 \u0440\u0430\u0437\u0432\u0435\u0434\u0434\u0430\u043D\u043D\u044B\u0435."
+  - Id: counterintel
+    Name: "\u041E\u0442\u0434\u0435\u043B \u043A\u043E\u043D\u0442\u0440\u0440\u0430\u0437\u0432\u0435\u0434\u043A\u0438"
+    ShortName: "\u041A\u043E\u043D\u0442\u0440\u0440\u0430\u0437\u0432\u0435\u0434\u043A\u0430"
+    Variant: 
+    Category: 2
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 12000
+    MonthlyUpkeep: 900
+    Color: {r: 0.62, g: 0.52, b: 0.34, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041C\u0435\u043D\u044C\u0448\u0435 \u0448\u0430\u043D\u0441 \u043F\u0440\u043E\u043D\u0438\u043A\u043D\u043E\u0432\u0435\u043D\u0438\u044F
+      \u041F\u043E\u0432\u0441\u0442\u0430\u043D\u0446\u0435\u0432 \u0425\u0430\u043E\u0441\u0430
+      \u0438 \u0434\u0440\u0443\u0433\u0438\u0445 \u0413\u041E\u0418."
+  - Id: infosec
+    Name: "\u041E\u0442\u0434\u0435\u043B \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u043E\u043D\u043D\u043E\u0439
+      \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u0438"
+    ShortName: "\u0418\u043D\u0444\u043E\u0431\u0435\u0437"
+    Variant: 
+    Category: 2
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 12000
+    MonthlyUpkeep: 900
+    Color: {r: 0.62, g: 0.52, b: 0.34, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0417\u0430\u0449\u0438\u0442\u0430 \u0441\u0435\u0442\u0435\u0439,
+      \u0434\u0430\u043D\u043D\u044B\u0445 \u0438 \u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u043E\u0432
+      \u043E\u0442 \u0443\u0442\u0435\u0447\u0435\u043A \u0438 \u0432\u0437\u043B\u043E\u043C\u0430."
+  - Id: amnestic_store
+    Name: "\u0421\u043A\u043B\u0430\u0434 \u0430\u043C\u043D\u0435\u0437\u0438\u0430\u043A\u043E\u0432"
+    ShortName: "\u0410\u043C\u043D\u0435\u0437\u0438\u0430\u043A\u0438"
+    Variant: 
+    Category: 2
+    Role: 0
+    Shape: 0
+    Size: {x: 4, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 5000
+    MonthlyUpkeep: 300
+    Color: {r: 0.62, g: 0.52, b: 0.34, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0410\u043C\u043D\u0435\u0437\u0438\u0430\u043A\u0438 \u0434\u043B\u044F
+      \u0441\u0432\u0438\u0434\u0435\u0442\u0435\u043B\u0435\u0439 \u0438 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u0430
+      \u043F\u043E\u0441\u043B\u0435 \u0438\u043D\u0446\u0438\u0434\u0435\u043D\u0442\u043E\u0432."
+  - Id: lockdown
+    Name: "\u041F\u0443\u043B\u044C\u0442 \u043A\u0430\u0440\u0430\u043D\u0442\u0438\u043D\u0430"
+    ShortName: "\u041A\u0430\u0440\u0430\u043D\u0442\u0438\u043D"
+    Variant: 
+    Category: 2
+    Role: 0
+    Shape: 0
+    Size: {x: 4, y: 3}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 15000
+    MonthlyUpkeep: 600
+    Color: {r: 0.62, g: 0.52, b: 0.34, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041B\u043E\u043A\u0434\u0430\u0443\u043D \u043A\u043E\u043C\u043F\u043B\u0435\u043A\u0441\u0430
+      \u043E\u0434\u043D\u043E\u0439 \u043A\u043D\u043E\u043F\u043A\u043E\u0439."
+  - Id: kennel
+    Name: "\u041A\u0438\u043D\u043E\u043B\u043E\u0433\u0438\u0447\u0435\u0441\u043A\u0430\u044F
+      \u0441\u043B\u0443\u0436\u0431\u0430"
+    ShortName: "\u041A\u0438\u043D\u043E\u043B\u043E\u0433\u0438"
+    Variant: 
+    Category: 2
+    Role: 0
+    Shape: 0
+    Size: {x: 6, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 8000
+    MonthlyUpkeep: 600
+    Color: {r: 0.62, g: 0.52, b: 0.34, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0421\u043E\u0431\u0430\u043A\u0438 \u0447\u0443\u044E\u0442 \u0430\u043D\u043E\u043C\u0430\u043B\u0438\u0438
+      \u0438 \u043D\u0430\u0440\u0443\u0448\u0438\u0442\u0435\u043B\u0435\u0439."
+  - Id: shelter
+    Name: "\u0423\u0431\u0435\u0436\u0438\u0449\u0435"
+    ShortName: "\u0423\u0431\u0435\u0436\u0438\u0449\u0435"
+    Variant: 
+    Category: 2
+    Role: 0
+    Shape: 0
+    Size: {x: 8, y: 6}
+    DoorX: 4
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 14000
+    MonthlyUpkeep: 400
+    Color: {r: 0.62, g: 0.52, b: 0.34, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041F\u0435\u0440\u0441\u043E\u043D\u0430\u043B \u043F\u0435\u0440\u0435\u0436\u0438\u0434\u0430\u0435\u0442
+      \u043D\u0430\u0440\u0443\u0448\u0435\u043D\u0438\u0435."
+  - Id: nuke
+    Name: "\u041F\u0443\u043D\u043A\u0442 \u044F\u0434\u0435\u0440\u043D\u043E\u0433\u043E
+      \u0441\u0430\u043C\u043E\u0443\u043D\u0438\u0447\u0442\u043E\u0436\u0435\u043D\u0438\u044F"
+    ShortName: "\u0421\u0430\u043C\u043E\u0443\u043D\u0438\u0447\u0442\u043E\u0436\u0435\u043D\u0438\u0435"
+    Variant: 
+    Category: 2
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 5}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 120000
+    MonthlyUpkeep: 3000
+    Color: {r: 0.62, g: 0.52, b: 0.34, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 5
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0439 \u0440\u0443\u0431\u0435\u0436,
+      \u0440\u0435\u0448\u0435\u043D\u0438\u0435 \u0432\u043C\u0435\u0441\u0442\u0435
+      \u0441 O5."
+  - Id: dorm_s
+    Name: "\u041E\u0431\u0449\u0435\u0436\u0438\u0442\u0438\u0435"
+    ShortName: "\u041E\u0431\u0449\u0435\u0436\u0438\u0442\u0438\u0435"
+    Variant: "\u043C\u0430\u043B\u044B\u0439"
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 6, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 6000
+    MonthlyUpkeep: 400
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 10
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0421\u043E\u043D \u0440\u044F\u0434\u043E\u0432\u043E\u0433\u043E
+      \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u0430 \u0438 \u043E\u0445\u0440\u0430\u043D\u044B.
+      \u041C\u0435\u0441\u0442: 10."
+  - Id: dorm_m
+    Name: "\u041E\u0431\u0449\u0435\u0436\u0438\u0442\u0438\u0435"
+    ShortName: "\u041E\u0431\u0449\u0435\u0436\u0438\u0442\u0438\u0435"
+    Variant: "\u0441\u0440\u0435\u0434\u043D\u0438\u0439"
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 9, y: 7}
+    DoorX: 4
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 13000
+    MonthlyUpkeep: 900
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 25
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0421\u043E\u043D \u0440\u044F\u0434\u043E\u0432\u043E\u0433\u043E
+      \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u0430 \u0438 \u043E\u0445\u0440\u0430\u043D\u044B.
+      \u041C\u0435\u0441\u0442: 25."
+  - Id: dorm_l
+    Name: "\u041E\u0431\u0449\u0435\u0436\u0438\u0442\u0438\u0435"
+    ShortName: "\u041E\u0431\u0449\u0435\u0436\u0438\u0442\u0438\u0435"
+    Variant: "\u0431\u043E\u043B\u044C\u0448\u043E\u0439"
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 12, y: 9}
+    DoorX: 6
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 22000
+    MonthlyUpkeep: 1500
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 40
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0421\u043E\u043D \u0440\u044F\u0434\u043E\u0432\u043E\u0433\u043E
+      \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u0430 \u0438 \u043E\u0445\u0440\u0430\u043D\u044B.
+      \u041C\u0435\u0441\u0442: 40."
+  - Id: officers
+    Name: "\u041A\u0432\u0430\u0440\u0442\u0438\u0440\u044B \u0441\u0442\u0430\u0440\u0448\u0435\u0433\u043E
+      \u0441\u043E\u0441\u0442\u0430\u0432\u0430"
+    ShortName: "\u041A\u0432\u0430\u0440\u0442\u0438\u0440\u044B"
+    Variant: 
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 8, y: 6}
+    DoorX: 4
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 14000
+    MonthlyUpkeep: 900
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0411\u0435\u0437 \u043D\u0438\u0445 \u043D\u0435 \u043D\u0430\u043D\u044F\u0442\u044C
+      \u0432\u0435\u0434\u0443\u0449\u0438\u0445 \u0443\u0447\u0451\u043D\u044B\u0445
+      \u0438 \u043E\u0444\u0438\u0446\u0435\u0440\u043E\u0432."
+  - Id: dclass_s
+    Name: "\u0411\u043B\u043E\u043A D-\u043A\u043B\u0430\u0441\u0441\u0430"
+    ShortName: "\u0411\u043B\u043E\u043A D"
+    Variant: "\u043C\u0430\u043B\u044B\u0439"
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 6, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 6000
+    MonthlyUpkeep: 400
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 10
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0411\u0430\u0440\u0430\u043A\u0438 \u043A\u043B\u0430\u0441\u0441\u0430
+      D \u043F\u043E\u0434 \u043E\u0445\u0440\u0430\u043D\u043E\u0439. \u041C\u0435\u0441\u0442:
+      10."
+  - Id: dclass_m
+    Name: "\u0411\u043B\u043E\u043A D-\u043A\u043B\u0430\u0441\u0441\u0430"
+    ShortName: "\u0411\u043B\u043E\u043A D"
+    Variant: "\u0441\u0440\u0435\u0434\u043D\u0438\u0439"
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 9, y: 7}
+    DoorX: 4
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 13000
+    MonthlyUpkeep: 900
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 25
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0411\u0430\u0440\u0430\u043A\u0438 \u043A\u043B\u0430\u0441\u0441\u0430
+      D \u043F\u043E\u0434 \u043E\u0445\u0440\u0430\u043D\u043E\u0439. \u041C\u0435\u0441\u0442:
+      25."
+  - Id: dclass_l
+    Name: "\u0411\u043B\u043E\u043A D-\u043A\u043B\u0430\u0441\u0441\u0430"
+    ShortName: "\u0411\u043B\u043E\u043A D"
+    Variant: "\u0431\u043E\u043B\u044C\u0448\u043E\u0439"
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 12, y: 9}
+    DoorX: 6
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 22000
+    MonthlyUpkeep: 1500
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 40
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0411\u0430\u0440\u0430\u043A\u0438 \u043A\u043B\u0430\u0441\u0441\u0430
+      D \u043F\u043E\u0434 \u043E\u0445\u0440\u0430\u043D\u043E\u0439. \u041C\u0435\u0441\u0442:
+      40."
+  - Id: canteen_s
+    Name: "\u0421\u0442\u043E\u043B\u043E\u0432\u0430\u044F \u0441 \u043A\u0443\u0445\u043D\u0435\u0439"
+    ShortName: "\u0421\u0442\u043E\u043B\u043E\u0432\u0430\u044F"
+    Variant: "\u043C\u0430\u043B\u044B\u0439"
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 6, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 6600
+    MonthlyUpkeep: 440
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 10
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0415\u0434\u0430. \u041C\u0435\u0441\u0442: 10."
+  - Id: canteen_m
+    Name: "\u0421\u0442\u043E\u043B\u043E\u0432\u0430\u044F \u0441 \u043A\u0443\u0445\u043D\u0435\u0439"
+    ShortName: "\u0421\u0442\u043E\u043B\u043E\u0432\u0430\u044F"
+    Variant: "\u0441\u0440\u0435\u0434\u043D\u0438\u0439"
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 9, y: 7}
+    DoorX: 4
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 14300
+    MonthlyUpkeep: 990
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 25
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0415\u0434\u0430. \u041C\u0435\u0441\u0442: 25."
+  - Id: canteen_l
+    Name: "\u0421\u0442\u043E\u043B\u043E\u0432\u0430\u044F \u0441 \u043A\u0443\u0445\u043D\u0435\u0439"
+    ShortName: "\u0421\u0442\u043E\u043B\u043E\u0432\u0430\u044F"
+    Variant: "\u0431\u043E\u043B\u044C\u0448\u043E\u0439"
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 12, y: 9}
+    DoorX: 6
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 24200
+    MonthlyUpkeep: 1650
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 40
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0415\u0434\u0430. \u041C\u0435\u0441\u0442: 40."
+  - Id: medbay_s
+    Name: "\u041C\u0435\u0434\u043F\u0443\u043D\u043A\u0442"
+    ShortName: "\u041C\u0435\u0434\u043F\u0443\u043D\u043A\u0442"
+    Variant: "\u043C\u0430\u043B\u044B\u0439"
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 7200
+    MonthlyUpkeep: 480
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 10
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041F\u0435\u0440\u0432\u0430\u044F \u043F\u043E\u043C\u043E\u0449\u044C.
+      \u041C\u0435\u0441\u0442: 10."
+  - Id: medbay_m
+    Name: "\u041C\u0435\u0434\u043F\u0443\u043D\u043A\u0442"
+    ShortName: "\u041C\u0435\u0434\u043F\u0443\u043D\u043A\u0442"
+    Variant: "\u0441\u0440\u0435\u0434\u043D\u0438\u0439"
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 7, y: 6}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 15600
+    MonthlyUpkeep: 1080
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 25
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041F\u0435\u0440\u0432\u0430\u044F \u043F\u043E\u043C\u043E\u0449\u044C.
+      \u041C\u0435\u0441\u0442: 25."
+  - Id: medbay_l
+    Name: "\u041C\u0435\u0434\u043F\u0443\u043D\u043A\u0442"
+    ShortName: "\u041C\u0435\u0434\u043F\u0443\u043D\u043A\u0442"
+    Variant: "\u0431\u043E\u043B\u044C\u0448\u043E\u0439"
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 10, y: 8}
+    DoorX: 5
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 26400
+    MonthlyUpkeep: 1800
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 40
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041F\u0435\u0440\u0432\u0430\u044F \u043F\u043E\u043C\u043E\u0449\u044C.
+      \u041C\u0435\u0441\u0442: 40."
+  - Id: hospital
+    Name: "\u0413\u043E\u0441\u043F\u0438\u0442\u0430\u043B\u044C"
+    ShortName: "\u0413\u043E\u0441\u043F\u0438\u0442\u0430\u043B\u044C"
+    Variant: 
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 10, y: 8}
+    DoorX: 5
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 30000
+    MonthlyUpkeep: 2200
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0425\u0438\u0440\u0443\u0440\u0433\u0438\u044F \u0438 \u0440\u0435\u0430\u043D\u0438\u043C\u0430\u0446\u0438\u044F
+      \u043F\u043E\u0441\u043B\u0435 \u0438\u043D\u0446\u0438\u0434\u0435\u043D\u0442\u043E\u0432."
+  - Id: med_isolation
+    Name: "\u041C\u0435\u0434\u0438\u0446\u0438\u043D\u0441\u043A\u0438\u0439 \u0438\u0437\u043E\u043B\u044F\u0442\u043E\u0440"
+    ShortName: "\u0418\u0437\u043E\u043B\u044F\u0442\u043E\u0440"
+    Variant: 
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 6, y: 4}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 9000
+    MonthlyUpkeep: 700
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0417\u0430\u0440\u0430\u0436\u0451\u043D\u043D\u044B\u0435 \u0438
+      \u043F\u043E\u043F\u0430\u0432\u0448\u0438\u0435 \u043F\u043E\u0434 \u0432\u043E\u0437\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435
+      \u043E\u0431\u044A\u0435\u043A\u0442\u0430."
+  - Id: morgue
+    Name: "\u041C\u043E\u0440\u0433"
+    ShortName: "\u041C\u043E\u0440\u0433"
+    Variant: 
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 5000
+    MonthlyUpkeep: 300
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0422\u0435\u043B\u0430 \u043F\u043E\u0441\u043B\u0435 \u0438\u043D\u0446\u0438\u0434\u0435\u043D\u0442\u043E\u0432
+      \u0438 \u0438\u0441\u043F\u044B\u0442\u0430\u043D\u0438\u0439."
+  - Id: psych
+    Name: "\u041F\u0441\u0438\u0445\u043E\u043B\u043E\u0433\u0438\u0447\u0435\u0441\u043A\u0430\u044F
+      \u0441\u043B\u0443\u0436\u0431\u0430"
+    ShortName: "\u041F\u0441\u0438\u0445\u043E\u043B\u043E\u0433\u0438"
+    Variant: 
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 6, y: 4}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 8000
+    MonthlyUpkeep: 600
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0421\u0442\u0440\u0435\u0441\u0441, \u043E\u0446\u0435\u043D\u043A\u0430
+      \u043F\u0435\u0440\u0435\u0434 \u043F\u043E\u0432\u044B\u0448\u0435\u043D\u0438\u0435\u043C
+      \u0434\u043E\u043F\u0443\u0441\u043A\u0430, \u0448\u043A\u0430\u043B\u0430
+      \u043F\u043E\u0441\u043B\u0443\u0448\u0430\u043D\u0438\u044F \u041C\u0438\u043B\u0433\u0440\u044D\u043C\u0430."
+  - Id: rec_s
+    Name: "\u041A\u043E\u043C\u043D\u0430\u0442\u0430 \u043E\u0442\u0434\u044B\u0445\u0430"
+    ShortName: "\u041E\u0442\u0434\u044B\u0445"
+    Variant: "\u043C\u0430\u043B\u044B\u0439"
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 4800
+    MonthlyUpkeep: 320
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 10
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041D\u0430\u0441\u0442\u0440\u043E\u0435\u043D\u0438\u0435. \u041C\u0435\u0441\u0442:
+      10."
+  - Id: rec_m
+    Name: "\u041A\u043E\u043C\u043D\u0430\u0442\u0430 \u043E\u0442\u0434\u044B\u0445\u0430"
+    ShortName: "\u041E\u0442\u0434\u044B\u0445"
+    Variant: "\u0441\u0440\u0435\u0434\u043D\u0438\u0439"
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 7, y: 6}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 10400
+    MonthlyUpkeep: 720
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 25
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041D\u0430\u0441\u0442\u0440\u043E\u0435\u043D\u0438\u0435. \u041C\u0435\u0441\u0442:
+      25."
+  - Id: rec_l
+    Name: "\u041A\u043E\u043C\u043D\u0430\u0442\u0430 \u043E\u0442\u0434\u044B\u0445\u0430"
+    ShortName: "\u041E\u0442\u0434\u044B\u0445"
+    Variant: "\u0431\u043E\u043B\u044C\u0448\u043E\u0439"
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 10, y: 8}
+    DoorX: 5
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 17600
+    MonthlyUpkeep: 1200
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 40
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041D\u0430\u0441\u0442\u0440\u043E\u0435\u043D\u0438\u0435. \u041C\u0435\u0441\u0442:
+      40."
+  - Id: gym
+    Name: "\u0421\u043F\u043E\u0440\u0442\u0437\u0430\u043B"
+    ShortName: "\u0421\u043F\u043E\u0440\u0442\u0437\u0430\u043B"
+    Variant: 
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 8, y: 6}
+    DoorX: 4
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 9000
+    MonthlyUpkeep: 500
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041D\u0430\u0441\u0442\u0440\u043E\u0435\u043D\u0438\u0435 \u0438
+      \u0444\u043E\u0440\u043C\u0430."
+  - Id: banya
+    Name: "\u0411\u0430\u043D\u044F"
+    ShortName: "\u0411\u0430\u043D\u044F"
+    Variant: 
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 6, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 8000
+    MonthlyUpkeep: 500
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041D\u0430\u0441\u0442\u0440\u043E\u0435\u043D\u0438\u0435, \u0432\u043E\u0435\u043D\u043D\u044B\u0439
+      \u043A\u043E\u043B\u043E\u0440\u0438\u0442."
+  - Id: club
+    Name: "\u041A\u043B\u0443\u0431-\u043A\u0438\u043D\u043E\u0437\u0430\u043B"
+    ShortName: "\u041A\u043B\u0443\u0431"
+    Variant: 
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 8, y: 7}
+    DoorX: 4
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 11000
+    MonthlyUpkeep: 600
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0414\u043E\u0441\u0443\u0433."
+  - Id: px
+    Name: "\u0412\u043E\u0435\u043D\u0442\u043E\u0440\u0433"
+    ShortName: "\u0412\u043E\u0435\u043D\u0442\u043E\u0440\u0433"
+    Variant: 
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 6000
+    MonthlyUpkeep: 200
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0421\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u0438 \u0442\u0440\u0430\u0442\u044F\u0442
+      \u0437\u0430\u0440\u043F\u043B\u0430\u0442\u0443, \u0447\u0430\u0441\u0442\u044C
+      \u0434\u0435\u043D\u0435\u0433 \u0432\u043E\u0437\u0432\u0440\u0430\u0449\u0430\u0435\u0442\u0441\u044F."
+  - Id: training_s
+    Name: "\u0423\u0447\u0435\u0431\u043D\u044B\u0439 \u0446\u0435\u043D\u0442\u0440"
+    ShortName: "\u0423\u0447\u0435\u0431\u043D\u044B\u0439 \u0446\u0435\u043D\u0442\u0440"
+    Variant: "\u043C\u0430\u043B\u044B\u0439"
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 6600
+    MonthlyUpkeep: 440
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 10
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u0438 \u0440\u043E\u0441\u0442
+      \u043F\u043E \u043A\u0430\u0440\u044C\u0435\u0440\u043D\u043E\u0439 \u043B\u0435\u0441\u0442\u043D\u0438\u0446\u0435.
+      \u041C\u0435\u0441\u0442: 10."
+  - Id: training_m
+    Name: "\u0423\u0447\u0435\u0431\u043D\u044B\u0439 \u0446\u0435\u043D\u0442\u0440"
+    ShortName: "\u0423\u0447\u0435\u0431\u043D\u044B\u0439 \u0446\u0435\u043D\u0442\u0440"
+    Variant: "\u0441\u0440\u0435\u0434\u043D\u0438\u0439"
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 7, y: 6}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 14300
+    MonthlyUpkeep: 990
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 25
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u0438 \u0440\u043E\u0441\u0442
+      \u043F\u043E \u043A\u0430\u0440\u044C\u0435\u0440\u043D\u043E\u0439 \u043B\u0435\u0441\u0442\u043D\u0438\u0446\u0435.
+      \u041C\u0435\u0441\u0442: 25."
+  - Id: training_l
+    Name: "\u0423\u0447\u0435\u0431\u043D\u044B\u0439 \u0446\u0435\u043D\u0442\u0440"
+    ShortName: "\u0423\u0447\u0435\u0431\u043D\u044B\u0439 \u0446\u0435\u043D\u0442\u0440"
+    Variant: "\u0431\u043E\u043B\u044C\u0448\u043E\u0439"
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 10, y: 8}
+    DoorX: 5
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 24200
+    MonthlyUpkeep: 1650
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 40
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435 \u0438 \u0440\u043E\u0441\u0442
+      \u043F\u043E \u043A\u0430\u0440\u044C\u0435\u0440\u043D\u043E\u0439 \u043B\u0435\u0441\u0442\u043D\u0438\u0446\u0435.
+      \u041C\u0435\u0441\u0442: 40."
+  - Id: sanblock_s
+    Name: "\u0421\u0430\u043D\u0431\u043B\u043E\u043A"
+    ShortName: "\u0421\u0430\u043D\u0431\u043B\u043E\u043A"
+    Variant: "\u043C\u0430\u043B\u044B\u0439"
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 4800
+    MonthlyUpkeep: 320
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 10
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0414\u0443\u0448\u0435\u0432\u044B\u0435 \u0438 \u043F\u0440\u0430\u0447\u0435\u0447\u043D\u0430\u044F.
+      \u041C\u0435\u0441\u0442: 10."
+  - Id: sanblock_m
+    Name: "\u0421\u0430\u043D\u0431\u043B\u043E\u043A"
+    ShortName: "\u0421\u0430\u043D\u0431\u043B\u043E\u043A"
+    Variant: "\u0441\u0440\u0435\u0434\u043D\u0438\u0439"
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 7, y: 6}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 10400
+    MonthlyUpkeep: 720
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 25
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0414\u0443\u0448\u0435\u0432\u044B\u0435 \u0438 \u043F\u0440\u0430\u0447\u0435\u0447\u043D\u0430\u044F.
+      \u041C\u0435\u0441\u0442: 25."
+  - Id: sanblock_l
+    Name: "\u0421\u0430\u043D\u0431\u043B\u043E\u043A"
+    ShortName: "\u0421\u0430\u043D\u0431\u043B\u043E\u043A"
+    Variant: "\u0431\u043E\u043B\u044C\u0448\u043E\u0439"
+    Category: 3
+    Role: 0
+    Shape: 0
+    Size: {x: 10, y: 8}
+    DoorX: 5
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 17600
+    MonthlyUpkeep: 1200
+    Color: {r: 0.58, g: 0.48, b: 0.62, a: 1}
+    Containment: 0
+    Capacity: 40
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0414\u0443\u0448\u0435\u0432\u044B\u0435 \u0438 \u043F\u0440\u0430\u0447\u0435\u0447\u043D\u0430\u044F.
+      \u041C\u0435\u0441\u0442: 40."
+  - Id: substation
+    Name: "\u041F\u043E\u0434\u0441\u0442\u0430\u043D\u0446\u0438\u044F"
+    ShortName: "\u041F\u043E\u0434\u0441\u0442\u0430\u043D\u0446\u0438\u044F"
+    Variant: 
+    Category: 4
+    Role: 0
+    Shape: 0
+    Size: {x: 4, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 6000
+    MonthlyUpkeep: 300
+    Color: {r: 0.5, g: 0.5, b: 0.42, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0420\u0430\u0441\u043F\u0440\u0435\u0434\u0435\u043B\u044F\u0435\u0442
+      \u043F\u0438\u0442\u0430\u043D\u0438\u0435 \u043F\u043E \u044D\u0442\u0430\u0436\u0443."
+  - Id: diesel
+    Name: "\u0414\u0438\u0437\u0435\u043B\u044C-\u0433\u0435\u043D\u0435\u0440\u0430\u0442\u043E\u0440\u043D\u0430\u044F"
+    ShortName: "\u0413\u0435\u043D\u0435\u0440\u0430\u0442\u043E\u0440\u044B"
+    Variant: 
+    Category: 4
+    Role: 0
+    Shape: 0
+    Size: {x: 6, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 12000
+    MonthlyUpkeep: 1200
+    Color: {r: 0.5, g: 0.5, b: 0.42, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041E\u0441\u043D\u043E\u0432\u043D\u043E\u0435 \u0438 \u0440\u0435\u0437\u0435\u0440\u0432\u043D\u043E\u0435
+      \u043F\u0438\u0442\u0430\u043D\u0438\u0435."
+  - Id: batteries
+    Name: "\u0410\u043A\u043A\u0443\u043C\u0443\u043B\u044F\u0442\u043E\u0440\u043D\u0430\u044F
+      (\u0418\u0411\u041F)"
+    ShortName: "\u0418\u0411\u041F"
+    Variant: 
+    Category: 4
+    Role: 0
+    Shape: 0
+    Size: {x: 4, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 8000
+    MonthlyUpkeep: 400
+    Color: {r: 0.5, g: 0.5, b: 0.42, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0414\u0435\u0440\u0436\u0438\u0442 \u043A\u0430\u043C\u0435\u0440\u044B
+      \u043F\u0440\u0438 \u0430\u0432\u0430\u0440\u0438\u0438; \u0431\u0435\u0437
+      \u043F\u043E\u0434\u043F\u0438\u0442\u043A\u0438 \u0441\u0430\u043C\u0430 \u0440\u0430\u0437\u0440\u044F\u0436\u0430\u0435\u0442\u0441\u044F."
+  - Id: reactor
+    Name: "\u041C\u0430\u043B\u0430\u044F \u0410\u042D\u0421"
+    ShortName: "\u0410\u042D\u0421"
+    Variant: 
+    Category: 4
+    Role: 0
+    Shape: 0
+    Size: {x: 12, y: 10}
+    DoorX: 6
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 250000
+    MonthlyUpkeep: 5000
+    Color: {r: 0.5, g: 0.5, b: 0.42, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 5
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041F\u043E\u043B\u043D\u0430\u044F \u044D\u043D\u0435\u0440\u0433\u043E\u043D\u0435\u0437\u0430\u0432\u0438\u0441\u0438\u043C\u043E\u0441\u0442\u044C."
+  - Id: fvu
+    Name: "\u0424\u0412\u0423"
+    ShortName: "\u0424\u0412\u0423"
+    Variant: 
+    Category: 4
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 5}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 10000
+    MonthlyUpkeep: 800
+    Color: {r: 0.5, g: 0.5, b: 0.42, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0424\u0438\u043B\u044C\u0442\u0440\u043E\u0432\u0435\u043D\u0442\u0438\u043B\u044F\u0446\u0438\u044F:
+      \u0432\u043E\u0437\u0434\u0443\u0445, \u0437\u0430\u0449\u0438\u0442\u0430
+      \u043E\u0442 \u0433\u0430\u0437\u043E\u0432 \u0438 \u0431\u0438\u043E\u0443\u0433\u0440\u043E\u0437."
+  - Id: water_plant
+    Name: "\u0421\u043A\u0432\u0430\u0436\u0438\u043D\u0430 \u0438 \u0432\u043E\u0434\u043E\u043E\u0447\u0438\u0441\u0442\u043A\u0430"
+    ShortName: "\u0412\u043E\u0434\u043E\u043E\u0447\u0438\u0441\u0442\u043A\u0430"
+    Variant: 
+    Category: 4
+    Role: 0
+    Shape: 0
+    Size: {x: 6, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 11000
+    MonthlyUpkeep: 700
+    Color: {r: 0.5, g: 0.5, b: 0.42, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041F\u0438\u0442\u044C\u0435\u0432\u0430\u044F \u0432\u043E\u0434\u0430."
+  - Id: pump_s
+    Name: "\u041D\u0430\u0441\u043E\u0441\u043D\u0430\u044F"
+    ShortName: "\u041D\u0430\u0441\u043E\u0441\u043D\u0430\u044F"
+    Variant: "\u043C\u0430\u043B\u0430\u044F"
+    Category: 4
+    Role: 9
+    Shape: 8
+    Size: {x: 4, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 8000
+    MonthlyUpkeep: 500
+    Color: {r: 0.3, g: 0.5, b: 0.72, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 12
+    PumpPower: 1
+    Branch: 0
+    Planned: 0
+    Description: "\u041E\u0442\u043A\u0430\u0447\u0438\u0432\u0430\u0435\u0442 \u0433\u0440\u0443\u043D\u0442\u043E\u0432\u044B\u0435
+      \u0432\u043E\u0434\u044B \u0432 \u0440\u0430\u0434\u0438\u0443\u0441\u0435
+      12 \u043C."
+  - Id: pump_l
+    Name: "\u041D\u0430\u0441\u043E\u0441\u043D\u0430\u044F"
+    ShortName: "\u041D\u0430\u0441\u043E\u0441\u043D\u0430\u044F"
+    Variant: "\u0431\u043E\u043B\u044C\u0448\u0430\u044F"
+    Category: 4
+    Role: 9
+    Shape: 8
+    Size: {x: 6, y: 6}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 20000
+    MonthlyUpkeep: 1100
+    Color: {r: 0.24, g: 0.42, b: 0.7, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 18
+    PumpPower: 2
+    Branch: 0
+    Planned: 0
+    Description: "\u041E\u0442\u043A\u0430\u0447\u0438\u0432\u0430\u0435\u0442 \u0433\u0440\u0443\u043D\u0442\u043E\u0432\u044B\u0435
+      \u0432\u043E\u0434\u044B \u0438 \u043F\u043E\u0434\u0437\u0435\u043C\u043D\u044B\u0435
+      \u0440\u0435\u043A\u0438 \u0432 \u0440\u0430\u0434\u0438\u0443\u0441\u0435
+      18 \u043C."
+  - Id: boiler
+    Name: "\u041A\u043E\u0442\u0435\u043B\u044C\u043D\u0430\u044F"
+    ShortName: "\u041A\u043E\u0442\u0435\u043B\u044C\u043D\u0430\u044F"
+    Variant: 
+    Category: 4
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 5}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 9000
+    MonthlyUpkeep: 700
+    Color: {r: 0.5, g: 0.5, b: 0.42, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0422\u0435\u043F\u043B\u043E."
+  - Id: sewage
+    Name: "\u041E\u0447\u0438\u0441\u0442\u043D\u044B\u0435 \u0441\u043E\u043E\u0440\u0443\u0436\u0435\u043D\u0438\u044F"
+    ShortName: "\u041E\u0447\u0438\u0441\u0442\u043D\u044B\u0435"
+    Variant: 
+    Category: 4
+    Role: 0
+    Shape: 0
+    Size: {x: 7, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 10000
+    MonthlyUpkeep: 600
+    Color: {r: 0.5, g: 0.5, b: 0.42, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041A\u0430\u043D\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F."
+  - Id: incinerator
+    Name: "\u0418\u043D\u0441\u0438\u043D\u0435\u0440\u0430\u0442\u043E\u0440"
+    ShortName: "\u0418\u043D\u0441\u0438\u043D\u0435\u0440\u0430\u0442\u043E\u0440"
+    Variant: 
+    Category: 4
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 5}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 9000
+    MonthlyUpkeep: 600
+    Color: {r: 0.5, g: 0.5, b: 0.42, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0423\u043D\u0438\u0447\u0442\u043E\u0436\u0435\u043D\u0438\u0435
+      \u043E\u043F\u0430\u0441\u043D\u044B\u0445 \u043E\u0442\u0445\u043E\u0434\u043E\u0432
+      \u0438 \u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u043E\u0432."
+  - Id: warehouse
+    Name: "\u041E\u0431\u0449\u0438\u0439 \u0441\u043A\u043B\u0430\u0434"
+    ShortName: "\u0421\u043A\u043B\u0430\u0434"
+    Variant: 
+    Category: 4
+    Role: 0
+    Shape: 0
+    Size: {x: 8, y: 6}
+    DoorX: 4
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 7000
+    MonthlyUpkeep: 300
+    Color: {r: 0.5, g: 0.5, b: 0.42, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0425\u0440\u0430\u043D\u0435\u043D\u0438\u0435."
+  - Id: food_store
+    Name: "\u041F\u0440\u043E\u0434\u043E\u0432\u043E\u043B\u044C\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0439
+      \u0441\u043A\u043B\u0430\u0434"
+    ShortName: "\u041F\u0440\u043E\u0434\u0441\u043A\u043B\u0430\u0434"
+    Variant: 
+    Category: 4
+    Role: 0
+    Shape: 0
+    Size: {x: 6, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 6000
+    MonthlyUpkeep: 400
+    Color: {r: 0.5, g: 0.5, b: 0.42, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0417\u0430\u043F\u0430\u0441\u044B \u0435\u0434\u044B \u0441
+      \u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A\u0430\u043C\u0438."
+  - Id: hydroponics
+    Name: "\u0413\u0438\u0434\u0440\u043E\u043F\u043E\u043D\u043D\u0430\u044F \u0444\u0435\u0440\u043C\u0430"
+    ShortName: "\u0413\u0438\u0434\u0440\u043E\u043F\u043E\u043D\u0438\u043A\u0430"
+    Variant: 
+    Category: 4
+    Role: 0
+    Shape: 0
+    Size: {x: 10, y: 7}
+    DoorX: 5
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 18000
+    MonthlyUpkeep: 900
+    Color: {r: 0.5, g: 0.5, b: 0.42, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0421\u0432\u043E\u044F \u0435\u0434\u0430, \u0430\u0432\u0442\u043E\u043D\u043E\u043C\u0438\u044F."
+  - Id: construction_store
+    Name: "\u0421\u043A\u043B\u0430\u0434 \u0441\u0442\u0440\u043E\u0439\u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u043E\u0432"
+    ShortName: "\u0421\u0442\u0440\u043E\u0439\u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u044B"
+    Variant: 
+    Category: 4
+    Role: 0
+    Shape: 0
+    Size: {x: 6, y: 6}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 8000
+    MonthlyUpkeep: 300
+    Color: {r: 0.5, g: 0.5, b: 0.42, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0423 \u0433\u0440\u0443\u0437\u043E\u0432\u043E\u0433\u043E \u043B\u0438\u0444\u0442\u0430:
+      \u0441\u0442\u0440\u043E\u0439\u043A\u0430 \u0434\u0435\u0448\u0435\u0432\u043B\u0435
+      \u0438 \u0431\u044B\u0441\u0442\u0440\u0435\u0435."
+  - Id: workshop
+    Name: "\u0420\u0435\u043C\u043E\u043D\u0442\u043D\u0430\u044F \u043C\u0430\u0441\u0442\u0435\u0440\u0441\u043A\u0430\u044F"
+    ShortName: "\u041C\u0430\u0441\u0442\u0435\u0440\u0441\u043A\u0430\u044F"
+    Variant: 
+    Category: 4
+    Role: 0
+    Shape: 0
+    Size: {x: 6, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 8000
+    MonthlyUpkeep: 500
+    Color: {r: 0.5, g: 0.5, b: 0.42, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0422\u0435\u0445\u043D\u0438\u043A\u0438 \u043E\u0431\u0441\u043B\u0443\u0436\u0438\u0432\u0430\u044E\u0442
+      \u043E\u0431\u043E\u0440\u0443\u0434\u043E\u0432\u0430\u043D\u0438\u0435."
+  - Id: factory
+    Name: "\u041F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0439
+      \u0446\u0435\u0445"
+    ShortName: "\u0426\u0435\u0445"
+    Variant: 
+    Category: 4
+    Role: 0
+    Shape: 0
+    Size: {x: 10, y: 8}
+    DoorX: 5
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 30000
+    MonthlyUpkeep: 1600
+    Color: {r: 0.5, g: 0.5, b: 0.42, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 3
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0421\u0432\u043E\u0438 \u0437\u0430\u043F\u0447\u0430\u0441\u0442\u0438
+      \u0438 \u043E\u0431\u043E\u0440\u0443\u0434\u043E\u0432\u0430\u043D\u0438\u0435."
+  - Id: servers
+    Name: "\u0421\u0435\u0440\u0432\u0435\u0440\u043D\u0430\u044F"
+    ShortName: "\u0421\u0435\u0440\u0432\u0435\u0440\u043D\u0430\u044F"
+    Variant: 
+    Category: 4
+    Role: 0
+    Shape: 0
+    Size: {x: 4, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 9000
+    MonthlyUpkeep: 700
+    Color: {r: 0.5, g: 0.5, b: 0.42, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0414\u0435\u0440\u0436\u0438\u0442 \u0441\u0432\u044F\u0437\u044C,
+      \u0432\u0438\u0434\u0435\u043E\u043D\u0430\u0431\u043B\u044E\u0434\u0435\u043D\u0438\u0435
+      \u0438 \u0434\u0430\u043D\u043D\u044B\u0435."
+  - Id: fuel
+    Name: "\u0421\u043A\u043B\u0430\u0434 \u0413\u0421\u041C"
+    ShortName: "\u0413\u0421\u041C"
+    Variant: 
+    Category: 4
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 6000
+    MonthlyUpkeep: 300
+    Color: {r: 0.5, g: 0.5, b: 0.42, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0422\u043E\u043F\u043B\u0438\u0432\u043E \u0434\u043B\u044F \u0433\u0435\u043D\u0435\u0440\u0430\u0442\u043E\u0440\u043E\u0432
+      \u0438 \u0442\u0435\u0445\u043D\u0438\u043A\u0438."
+  - Id: garage
+    Name: "\u041F\u043E\u0434\u0437\u0435\u043C\u043D\u044B\u0439 \u0430\u0432\u0442\u043E\u043F\u0430\u0440\u043A"
+    ShortName: "\u0410\u0432\u0442\u043E\u043F\u0430\u0440\u043A"
+    Variant: 
+    Category: 4
+    Role: 0
+    Shape: 9
+    Size: {x: 12, y: 10}
+    DoorX: 6
+    DoorWidth: 4
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 24000
+    MonthlyUpkeep: 1200
+    Color: {r: 0.5, g: 0.5, b: 0.42, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 1
+    MinCorridorWidth: 0
+    AttachToEntrance: 1
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041C\u0430\u0448\u0438\u043D\u044B \u0434\u043B\u044F \u043B\u043E\u0433\u0438\u0441\u0442\u0438\u043A\u0438
+      \u0438 \u041C\u041E\u0413. \u0421\u0442\u0430\u0432\u0438\u0442\u0441\u044F
+      \u0442\u043E\u043B\u044C\u043A\u043E \u0443 \u0433\u043B\u0430\u0432\u043D\u043E\u0433\u043E
+      \u0432\u044A\u0435\u0437\u0434\u0430, \u0432\u043E\u0440\u043E\u0442\u0430\u043C\u0438
+      \u0432 \u0437\u0430\u043B."
+  - Id: helipad
+    Name: "\u041F\u043E\u0434\u0437\u0435\u043C\u043D\u0430\u044F \u0432\u0435\u0440\u0442\u043E\u043B\u0451\u0442\u043D\u0430\u044F
+      \u043F\u043B\u043E\u0449\u0430\u0434\u043A\u0430"
+    ShortName: "\u0412\u0435\u0440\u0442\u043E\u043B\u0451\u0442\u043D\u0430\u044F"
+    Variant: 
+    Category: 4
+    Role: 0
+    Shape: 9
+    Size: {x: 12, y: 12}
+    DoorX: 6
+    DoorWidth: 4
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 60000
+    MonthlyUpkeep: 2500
+    Color: {r: 0.5, g: 0.5, b: 0.42, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 3
+    Buildable: 1
+    OnlyDepth: 1
+    MinCorridorWidth: 0
+    AttachToEntrance: 1
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0414\u043E\u0441\u0442\u0430\u0432\u043A\u0430 \u043E\u0431\u044A\u0435\u043A\u0442\u043E\u0432
+      \u0438 \u041C\u041E\u0413. \u0422\u043E\u043B\u044C\u043A\u043E \u0443 \u0433\u043B\u0430\u0432\u043D\u043E\u0433\u043E
+      \u0432\u044A\u0435\u0437\u0434\u0430, \u0432\u043E\u0440\u043E\u0442\u0430\u043C\u0438
+      \u0432 \u0437\u0430\u043B."
+  - Id: director_office
+    Name: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 \u0434\u0438\u0440\u0435\u043A\u0442\u043E\u0440\u0430"
+    ShortName: "\u0414\u0438\u0440\u0435\u043A\u0442\u043E\u0440"
+    Variant: 
+    Category: 5
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 8000
+    MonthlyUpkeep: 400
+    Color: {r: 0.46, g: 0.48, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0426\u0435\u043D\u0442\u0440 \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F
+      \u0417\u043E\u043D\u043E\u0439."
+  - Id: staff_hq
+    Name: "\u0428\u0442\u0430\u0431-\u043A\u0430\u043D\u0446\u0435\u043B\u044F\u0440\u0438\u044F"
+    ShortName: "\u041A\u0430\u043D\u0446\u0435\u043B\u044F\u0440\u0438\u044F"
+    Variant: 
+    Category: 5
+    Role: 0
+    Shape: 0
+    Size: {x: 6, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 8000
+    MonthlyUpkeep: 600
+    Color: {r: 0.46, g: 0.48, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u043E\u043E\u0431\u043E\u0440\u043E\u0442."
+  - Id: meeting
+    Name: "\u0417\u0430\u043B \u0441\u043E\u0432\u0435\u0449\u0430\u043D\u0438\u0439"
+    ShortName: "\u0421\u043E\u0432\u0435\u0449\u0430\u043D\u0438\u044F"
+    Variant: 
+    Category: 5
+    Role: 0
+    Shape: 0
+    Size: {x: 7, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 10000
+    MonthlyUpkeep: 500
+    Color: {r: 0.46, g: 0.48, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0412\u0438\u0437\u0438\u0442\u044B \u0438 \u0433\u043E\u043B\u043E\u0441\u043E\u0432\u0430\u043D\u0438\u044F
+      \u0421\u043E\u0432\u0435\u0442\u0430 O5."
+  - Id: finance
+    Name: "\u0424\u0438\u043D\u0430\u043D\u0441\u043E\u0432\u044B\u0439 \u043E\u0442\u0434\u0435\u043B"
+    ShortName: "\u0424\u0438\u043D\u0430\u043D\u0441\u044B"
+    Variant: 
+    Category: 5
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 9000
+    MonthlyUpkeep: 700
+    Color: {r: 0.46, g: 0.48, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0411\u044E\u0434\u0436\u0435\u0442, \u0438\u043D\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u0438,
+      \u043F\u0440\u043E\u0446\u0435\u043D\u0442\u044B."
+  - Id: hr
+    Name: "\u041E\u0442\u0434\u0435\u043B \u043A\u0430\u0434\u0440\u043E\u0432"
+    ShortName: "\u041A\u0430\u0434\u0440\u044B"
+    Variant: 
+    Category: 5
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 7000
+    MonthlyUpkeep: 600
+    Color: {r: 0.46, g: 0.48, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041D\u0430\u0439\u043C \u0438 \u043A\u0430\u0440\u044C\u0435\u0440\u043D\u0430\u044F
+      \u043B\u0435\u0441\u0442\u043D\u0438\u0446\u0430."
+  - Id: supply
+    Name: "\u041E\u0442\u0434\u0435\u043B \u0441\u043D\u0430\u0431\u0436\u0435\u043D\u0438\u044F"
+    ShortName: "\u0421\u043D\u0430\u0431\u0436\u0435\u043D\u0438\u0435"
+    Variant: 
+    Category: 5
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 8000
+    MonthlyUpkeep: 600
+    Color: {r: 0.46, g: 0.48, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0414\u0435\u0448\u0435\u0432\u043B\u0435 \u0437\u0430\u043A\u0443\u043F\u043A\u0438
+      \u0438 \u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u044B."
+  - Id: legal
+    Name: "\u042E\u0440\u0438\u0434\u0438\u0447\u0435\u0441\u043A\u0438\u0439 \u043E\u0442\u0434\u0435\u043B"
+    ShortName: "\u042E\u0440\u0438\u0441\u0442\u044B"
+    Variant: 
+    Category: 5
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 10000
+    MonthlyUpkeep: 800
+    Color: {r: 0.46, g: 0.48, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0414\u043E\u0433\u043E\u0432\u043E\u0440\u044B, \u043A\u043E\u043C\u043C\u0435\u0440\u0446\u0438\u044F,
+      \u0441\u0434\u0435\u043B\u043A\u0438 \u0441 \u0413\u041E\u0418."
+  - Id: ethics
+    Name: "\u041F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u0438\u0442\u0435\u043B\u044C\u0441\u0442\u0432\u043E
+      \u041A\u043E\u043C\u0438\u0442\u0435\u0442\u0430 \u043F\u043E \u044D\u0442\u0438\u043A\u0435"
+    ShortName: "\u041A\u043E\u043C\u0438\u0442\u0435\u0442 \u043F\u043E \u044D\u0442\u0438\u043A\u0435"
+    Variant: 
+    Category: 5
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 9000
+    MonthlyUpkeep: 500
+    Color: {r: 0.46, g: 0.48, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0421\u043E\u0433\u043B\u0430\u0441\u0443\u0435\u0442 \u0441\u043F\u043E\u0440\u043D\u044B\u0435
+      \u0438\u0441\u043F\u044B\u0442\u0430\u043D\u0438\u044F."
+  - Id: o5_link
+    Name: "\u0423\u0437\u0435\u043B \u0441\u043F\u0435\u0446\u0441\u0432\u044F\u0437\u0438
+      \u0441 O5"
+    ShortName: "\u0421\u043F\u0435\u0446\u0441\u0432\u044F\u0437\u044C O5"
+    Variant: 
+    Category: 5
+    Role: 0
+    Shape: 0
+    Size: {x: 4, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 20000
+    MonthlyUpkeep: 900
+    Color: {r: 0.46, g: 0.48, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0414\u043E\u0432\u0435\u0440\u0438\u0435 \u0438 \u0431\u043E\u043B\u0435\u0435
+      \u0431\u044B\u0441\u0442\u0440\u043E\u0435 \u0444\u0438\u043D\u0430\u043D\u0441\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435."
+  - Id: archive
+    Name: "\u0410\u0440\u0445\u0438\u0432 \u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u0438"
+    ShortName: "\u0410\u0440\u0445\u0438\u0432"
+    Variant: 
+    Category: 5
+    Role: 0
+    Shape: 0
+    Size: {x: 6, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 9000
+    MonthlyUpkeep: 500
+    Color: {r: 0.46, g: 0.48, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0425\u0440\u0430\u043D\u0435\u043D\u0438\u0435 \u043F\u043E \u0434\u043E\u043F\u0443\u0441\u043A\u0430\u043C,
+      \u0437\u0430\u0449\u0438\u0442\u0430 \u043E\u0442 \u0443\u0442\u0435\u0447\u0435\u043A."
+  - Id: coverup
+    Name: "\u041E\u0442\u0434\u0435\u043B \u043F\u0440\u0438\u043A\u0440\u044B\u0442\u0438\u044F"
+    ShortName: "\u041F\u0440\u0438\u043A\u0440\u044B\u0442\u0438\u0435"
+    Variant: 
+    Category: 5
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 12000
+    MonthlyUpkeep: 900
+    Color: {r: 0.46, g: 0.48, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041B\u0435\u0433\u0435\u043D\u0434\u044B \u0434\u043B\u044F \u0421\u041C\u0418,
+      \u0441\u043D\u0438\u0436\u0430\u0435\u0442 \u0440\u0430\u0441\u0441\u0435\u043A\u0440\u0435\u0447\u0438\u0432\u0430\u043D\u0438\u0435."
+  - Id: front_office
+    Name: "\u041E\u0444\u0438\u0441 \u043A\u043E\u043C\u043F\u0430\u043D\u0438\u0438-\u043F\u0440\u0438\u043A\u0440\u044B\u0442\u0438\u044F"
+    ShortName: "\u041A\u043E\u043C\u043F\u0430\u043D\u0438\u044F-\u043F\u0440\u0438\u043A\u0440\u044B\u0442\u0438\u0435"
+    Variant: 
+    Category: 5
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 15000
+    MonthlyUpkeep: 600
+    Color: {r: 0.46, g: 0.48, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0424\u0430\u0441\u0430\u0434 \u0417\u043E\u043D\u044B, \u043D\u0435\u043C\u043D\u043E\u0433\u043E
+      \u0434\u0435\u043D\u0435\u0433."
+  - Id: analytics
+    Name: "\u0410\u043D\u0430\u043B\u0438\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0439
+      \u043E\u0442\u0434\u0435\u043B"
+    ShortName: "\u0410\u043D\u0430\u043B\u0438\u0442\u0438\u043A\u0430"
+    Variant: 
+    Category: 5
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 15000
+    MonthlyUpkeep: 1000
+    Color: {r: 0.46, g: 0.48, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 3
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041F\u0440\u043E\u0434\u0430\u0436\u0430 \u0434\u0430\u043D\u043D\u044B\u0445,
+      \u0438\u0441\u0442\u043E\u0447\u043D\u0438\u043A \u0434\u0435\u043D\u0435\u0433."
+  - Id: grants
+    Name: "\u041E\u0442\u0434\u0435\u043B \u0433\u0440\u0430\u043D\u0442\u043E\u0432"
+    ShortName: "\u0413\u0440\u0430\u043D\u0442\u044B"
+    Variant: 
+    Category: 5
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 10000
+    MonthlyUpkeep: 700
+    Color: {r: 0.46, g: 0.48, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0413\u0440\u0430\u043D\u0442\u044B \u0438 \u043D\u0430\u0443\u0447\u043D\u044B\u0435
+      \u0441\u0432\u044F\u0437\u0438."
+  - Id: guests
+    Name: "\u0413\u043E\u0441\u0442\u0435\u0432\u044B\u0435 \u0430\u043F\u0430\u0440\u0442\u0430\u043C\u0435\u043D\u0442\u044B"
+    ShortName: "\u0413\u043E\u0441\u0442\u0438"
+    Variant: 
+    Category: 5
+    Role: 0
+    Shape: 0
+    Size: {x: 7, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 16000
+    MonthlyUpkeep: 900
+    Color: {r: 0.46, g: 0.48, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 3
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0418\u043D\u0441\u043F\u0435\u043A\u0442\u043E\u0440\u044B O5,
+      \u0434\u0435\u043B\u0435\u0433\u0430\u0446\u0438\u0438 \u0434\u0440\u0443\u0433\u0438\u0445
+      \u0417\u043E\u043D."
+  - Id: dept_heads
+    Name: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442\u044B \u043D\u0430\u0447\u0430\u043B\u044C\u043D\u0438\u043A\u043E\u0432
+      \u043E\u0442\u0434\u0435\u043B\u043E\u0432"
+    ShortName: "\u041D\u0430\u0447\u0430\u043B\u044C\u043D\u0438\u043A\u0438"
+    Variant: 
+    Category: 5
+    Role: 0
+    Shape: 0
+    Size: {x: 7, y: 5}
+    DoorX: 3
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 14000
+    MonthlyUpkeep: 900
+    Color: {r: 0.46, g: 0.48, b: 0.66, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041E\u0442\u043A\u0440\u044B\u0432\u0430\u044E\u0442 \u0434\u043E\u043B\u0436\u043D\u043E\u0441\u0442\u0438
+      \u0433\u043B\u0430\u0432 \u043D\u0430\u0443\u043A\u0438, \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u0438,
+      \u043C\u0435\u0434\u0438\u0446\u0438\u043D\u044B."
+  - Id: main_entrance
+    Name: "\u0413\u043B\u0430\u0432\u043D\u044B\u0439 \u0432\u044A\u0435\u0437\u0434"
+    ShortName: "\u0413\u043B\u0430\u0432\u043D\u044B\u0439 \u0432\u044A\u0435\u0437\u0434"
+    Variant: 
+    Category: 6
+    Role: 1
+    Shape: 6
+    Size: {x: 18, y: 16}
+    DoorX: 9
+    DoorWidth: 5
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 0
+    MonthlyUpkeep: 1500
+    Color: {r: 0.3, g: 0.32, b: 0.36, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 0
+    OnlyDepth: 1
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 0
+    Description: "\u041F\u043E\u0434\u0437\u0435\u043C\u043D\u0430\u044F \u0434\u043E\u0440\u043E\u0433\u0430
+      \u0441 \u043F\u043E\u0432\u0435\u0440\u0445\u043D\u043E\u0441\u0442\u0438.
+      \u041E\u0442\u0441\u044E\u0434\u0430 \u043D\u0430\u0447\u0438\u043D\u0430\u0435\u0442\u0441\u044F
+      \u0432\u0441\u044F \u0417\u043E\u043D\u0430."
+  - Id: elev_personnel
+    Name: "\u041F\u0430\u0441\u0441\u0430\u0436\u0438\u0440\u0441\u043A\u0438\u0439
+      \u043B\u0438\u0444\u0442"
+    ShortName: "\u041F\u0430\u0441\u0441. \u043B\u0438\u0444\u0442"
+    Variant: 
+    Category: 6
+    Role: 3
+    Shape: 1
+    Size: {x: 3, y: 3}
+    DoorX: 1
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 15000
+    MonthlyUpkeep: 600
+    Color: {r: 0.35, g: 0.5, b: 0.72, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 0
+    Description: "\u041F\u0435\u0440\u0441\u043E\u043D\u0430\u043B \u043C\u0435\u0436\u0434\u0443
+      \u044D\u0442\u0430\u0436\u0430\u043C\u0438. \u0428\u0430\u0445\u0442\u0430
+      \u0437\u0430\u043D\u0438\u043C\u0430\u0435\u0442 \u0442\u0435 \u0436\u0435
+      \u043A\u043B\u0435\u0442\u043A\u0438 \u044D\u0442\u0430\u0436\u043E\u043C \u043D\u0438\u0436\u0435."
+  - Id: elev_freight
+    Name: "\u0413\u0440\u0443\u0437\u043E\u0432\u043E\u0439 \u043B\u0438\u0444\u0442"
+    ShortName: "\u0413\u0440\u0443\u0437. \u043B\u0438\u0444\u0442"
+    Variant: 
+    Category: 6
+    Role: 4
+    Shape: 1
+    Size: {x: 5, y: 5}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 25000
+    MonthlyUpkeep: 1000
+    Color: {r: 0.55, g: 0.47, b: 0.3, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 0
+    Description: "\u0421\u0442\u0440\u043E\u0439\u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u044B,
+      \u043E\u0431\u044A\u0435\u043A\u0442\u044B \u0438 \u043A\u043E\u043C\u043C\u0443\u043D\u0438\u043A\u0430\u0446\u0438\u0438.
+      \u0411\u0435\u0437 \u043D\u0435\u0433\u043E \u044D\u0442\u0430\u0436 \u043D\u0438\u0436\u0435
+      \u043D\u0435 \u043E\u0442\u043A\u0440\u044B\u0442\u044C."
+  - Id: elev_heavy
+    Name: "\u0422\u044F\u0436\u0451\u043B\u044B\u0439 \u043B\u0438\u0444\u0442"
+    ShortName: "\u0422\u044F\u0436. \u043B\u0438\u0444\u0442"
+    Variant: 
+    Category: 6
+    Role: 5
+    Shape: 1
+    Size: {x: 8, y: 8}
+    DoorX: 4
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 60000
+    MonthlyUpkeep: 2200
+    Color: {r: 0.62, g: 0.44, b: 0.26, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 3
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 5
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 0
+    Description: "\u041A\u0440\u0443\u043F\u043D\u044B\u0435 \u043E\u0431\u044A\u0435\u043A\u0442\u044B
+      \u0438 \u0442\u0435\u0445\u043D\u0438\u043A\u0430. \u0412\u0445\u043E\u0434
+      \u0441 \u0448\u0438\u0440\u043E\u043A\u043E\u0433\u043E \u043A\u043E\u0440\u0438\u0434\u043E\u0440\u0430."
+  - Id: emergency_stairs
+    Name: "\u0410\u0432\u0430\u0440\u0438\u0439\u043D\u0430\u044F \u043B\u0435\u0441\u0442\u043D\u0438\u0446\u0430"
+    ShortName: "\u041B\u0435\u0441\u0442\u043D\u0438\u0446\u0430"
+    Variant: 
+    Category: 6
+    Role: 0
+    Shape: 0
+    Size: {x: 3, y: 4}
+    DoorX: 1
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 6000
+    MonthlyUpkeep: 200
+    Color: {r: 0.42, g: 0.52, b: 0.7, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u042D\u0432\u0430\u043A\u0443\u0430\u0446\u0438\u044F \u043C\u0435\u0436\u0434\u0443
+      \u044D\u0442\u0430\u0436\u0430\u043C\u0438 \u0431\u0435\u0437 \u043B\u0438\u0444\u0442\u0430."
+  - Id: emergency_exit
+    Name: "\u0410\u0432\u0430\u0440\u0438\u0439\u043D\u044B\u0439 \u0432\u044B\u0445\u043E\u0434"
+    ShortName: "\u0410\u0432\u0430\u0440. \u0432\u044B\u0445\u043E\u0434"
+    Variant: 
+    Category: 6
+    Role: 2
+    Shape: 2
+    Size: {x: 4, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 10000
+    MonthlyUpkeep: 300
+    Color: {r: 0.75, g: 0.33, b: 0.28, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 1
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 0
+    Description: "\u0415\u0449\u0451 \u043E\u0434\u0438\u043D \u043F\u0443\u0442\u044C
+      \u043D\u0430 \u043F\u043E\u0432\u0435\u0440\u0445\u043D\u043E\u0441\u0442\u044C.
+      \u0411\u0435\u0437 \u0432\u0442\u043E\u0440\u043E\u0433\u043E \u0432\u044B\u0445\u043E\u0434\u0430
+      \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u0443 \u043D\u0435\u043A\u0443\u0434\u0430
+      \u044D\u0432\u0430\u043A\u0443\u0438\u0440\u043E\u0432\u0430\u0442\u044C\u0441\u044F."
+  - Id: vehicle_entrance
+    Name: "\u0422\u0440\u0430\u043D\u0441\u043F\u043E\u0440\u0442\u043D\u044B\u0439
+      \u0432\u044A\u0435\u0437\u0434"
+    ShortName: "\u0422\u0440\u0430\u043D\u0441\u043F. \u0432\u044A\u0435\u0437\u0434"
+    Variant: 
+    Category: 6
+    Role: 2
+    Shape: 2
+    Size: {x: 8, y: 10}
+    DoorX: 4
+    DoorWidth: 3
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 45000
+    MonthlyUpkeep: 1200
+    Color: {r: 0.36, g: 0.38, b: 0.42, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 1
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 0
+    Description: "\u0415\u0449\u0451 \u043E\u0434\u0438\u043D \u0432\u044A\u0435\u0437\u0434
+      \u0441 \u043F\u043E\u0432\u0435\u0440\u0445\u043D\u043E\u0441\u0442\u0438 \u2014
+      \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0435\u043D\u0438\u0435 \u0434\u043E\u0440\u043E\u0433\u0438."
+  - Id: evac_tunnel
+    Name: "\u042D\u0432\u0430\u043A\u0443\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439
+      \u0442\u0443\u043D\u043D\u0435\u043B\u044C"
+    ShortName: "\u042D\u0432\u0430\u043A. \u0442\u0443\u043D\u043D\u0435\u043B\u044C"
+    Variant: 
+    Category: 6
+    Role: 2
+    Shape: 2
+    Size: {x: 3, y: 8}
+    DoorX: 1
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 20000
+    MonthlyUpkeep: 400
+    Color: {r: 0.7, g: 0.4, b: 0.3, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 1
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 0
+    Description: "\u0412\u044B\u0445\u043E\u0434 \u0434\u0430\u043B\u0435\u043A\u043E
+      \u0437\u0430 \u043F\u0435\u0440\u0438\u043C\u0435\u0442\u0440."
+  - Id: sanitary_lock
+    Name: "\u0421\u0430\u043D\u043F\u0440\u043E\u043F\u0443\u0441\u043A\u043D\u0438\u043A
+      \u0441\u0435\u043A\u0442\u043E\u0440\u0430"
+    ShortName: "\u0421\u0430\u043D\u043F\u0440\u043E\u043F\u0443\u0441\u043A\u043D\u0438\u043A"
+    Variant: 
+    Category: 6
+    Role: 10
+    Shape: 3
+    Size: {x: 3, y: 2}
+    DoorX: -1
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 7000
+    MonthlyUpkeep: 400
+    Color: {r: 0.55, g: 0.8, b: 0.75, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 2
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 2
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0414\u0435\u0437\u0438\u043D\u0444\u0435\u043A\u0446\u0438\u044F
+      \u043C\u0435\u0436\u0434\u0443 \u0441\u0435\u043A\u0442\u043E\u0440\u0430\u043C\u0438."
+  - Id: monorail
+    Name: "\u0421\u0442\u0430\u043D\u0446\u0438\u044F \u043C\u043E\u043D\u043E\u0440\u0435\u043B\u044C\u0441\u0430"
+    ShortName: "\u041C\u043E\u043D\u043E\u0440\u0435\u043B\u044C\u0441"
+    Variant: 
+    Category: 6
+    Role: 0
+    Shape: 0
+    Size: {x: 8, y: 4}
+    DoorX: 4
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 50000
+    MonthlyUpkeep: 1800
+    Color: {r: 0.42, g: 0.52, b: 0.7, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 5
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 7
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0411\u044B\u0441\u0442\u0440\u0430\u044F \u043F\u0435\u0440\u0435\u0432\u043E\u0437\u043A\u0430
+      \u043F\u043E \u043C\u0430\u0433\u0438\u0441\u0442\u0440\u0430\u043B\u0438."
+  - Id: pneumo
+    Name: "\u041F\u043D\u0435\u0432\u043C\u043E\u043F\u043E\u0447\u0442\u0430"
+    ShortName: "\u041F\u043D\u0435\u0432\u043C\u043E\u043F\u043E\u0447\u0442\u0430"
+    Variant: 
+    Category: 6
+    Role: 0
+    Shape: 0
+    Size: {x: 2, y: 2}
+    DoorX: 1
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 3000
+    MonthlyUpkeep: 100
+    Color: {r: 0.42, g: 0.52, b: 0.7, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B \u0445\u043E\u0434\u044F\u0442
+      \u0431\u044B\u0441\u0442\u0440\u0435\u0435."
+  - Id: telephone
+    Name: "\u0423\u0437\u0435\u043B \u0441\u0432\u044F\u0437\u0438 (\u0410\u0422\u0421)"
+    ShortName: "\u0410\u0422\u0421"
+    Variant: 
+    Category: 6
+    Role: 0
+    Shape: 0
+    Size: {x: 4, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 6000
+    MonthlyUpkeep: 300
+    Color: {r: 0.42, g: 0.52, b: 0.7, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0422\u0435\u043B\u0435\u0444\u043E\u043D\u0438\u044F."
+  - Id: radio
+    Name: "\u0420\u0430\u0434\u0438\u043E\u0446\u0435\u043D\u0442\u0440"
+    ShortName: "\u0420\u0430\u0434\u0438\u043E\u0446\u0435\u043D\u0442\u0440"
+    Variant: 
+    Category: 6
+    Role: 0
+    Shape: 0
+    Size: {x: 5, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 9000
+    MonthlyUpkeep: 500
+    Color: {r: 0.42, g: 0.52, b: 0.7, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0420\u0430\u0434\u0438\u043E\u0441\u0432\u044F\u0437\u044C \u0441
+      \u043F\u043E\u0432\u0435\u0440\u0445\u043D\u043E\u0441\u0442\u044C\u044E \u0438
+      \u041C\u041E\u0413."
+  - Id: alert_center
+    Name: "\u0426\u0435\u043D\u0442\u0440 \u043E\u043F\u043E\u0432\u0435\u0449\u0435\u043D\u0438\u044F"
+    ShortName: "\u041E\u043F\u043E\u0432\u0435\u0449\u0435\u043D\u0438\u0435"
+    Variant: 
+    Category: 6
+    Role: 0
+    Shape: 0
+    Size: {x: 4, y: 4}
+    DoorX: 2
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 8000
+    MonthlyUpkeep: 400
+    Color: {r: 0.42, g: 0.52, b: 0.7, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u0421\u0438\u0440\u0435\u043D\u044B \u0438 \u0433\u0440\u043E\u043C\u043A\u0430\u044F
+      \u0441\u0432\u044F\u0437\u044C, \u044D\u0432\u0430\u043A\u0443\u0430\u0446\u0438\u044F
+      \u0431\u044B\u0441\u0442\u0440\u0435\u0435."
+  - Id: vent_shaft
+    Name: "\u0412\u0435\u043D\u0442\u0438\u043B\u044F\u0446\u0438\u043E\u043D\u043D\u0430\u044F
+      \u0448\u0430\u0445\u0442\u0430"
+    ShortName: "\u0412\u0435\u043D\u0442\u0448\u0430\u0445\u0442\u0430"
+    Variant: 
+    Category: 6
+    Role: 0
+    Shape: 0
+    Size: {x: 2, y: 2}
+    DoorX: 1
+    DoorWidth: 1
+    ControlWidth: 0
+    ControlDoorX: -1
+    Cost: 3000
+    MonthlyUpkeep: 100
+    Color: {r: 0.42, g: 0.52, b: 0.7, a: 1}
+    Containment: 0
+    Capacity: 0
+    RequiredDirectorLevel: 1
+    Buildable: 1
+    OnlyDepth: 0
+    MinCorridorWidth: 0
+    AttachToEntrance: 0
+    PumpRadius: 0
+    PumpPower: 0
+    Branch: 0
+    Planned: 1
+    Description: "\u041D\u0443\u0436\u043D\u0430 \u0424\u0412\u0423, \u043D\u043E
+      \u043F\u043E \u043D\u0435\u0439 \u043C\u043E\u0436\u0435\u0442 \u0441\u0431\u0435\u0436\u0430\u0442\u044C
+      \u043E\u0431\u044A\u0435\u043A\u0442."
